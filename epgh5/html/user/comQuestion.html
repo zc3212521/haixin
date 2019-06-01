@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>常见问题</title>
+    <meta charset="UTF-8">
+     <link href="../../css/common.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/personal.css">
+     <link rel="stylesheet" href="../../css/animated.css">
+</head>
+
+<body class="black">
+<div class="page-content animated slideInUp">
+
+        <div class="sel_lr">
+            <img src="../../img/logo.png" alt="">
+            <span id="sel_time"></span>
+        </div>
+        <div class="questionFack comQuestion">
+            <ul class="li">
+                <li class="active">
+                    <p>网络问题</p>
+                    <div class="qes" style="display: block;">
+                        <span>
+                            <p><span class="q">Q: </span>提示(未检测到任何网络,请检查本设备是否联网)怎么办?</p>
+                            <p>请检查电路和路由器连接状况，如果您使用有限网路请确认网线是否插好</p>
+                        </span>
+                        <span>
+                            <p><span class="q">Q: </span>提示(未检测到任何网络,请检查本设备是否联网)怎么办?</p>
+                            <p>请检查电路和路由器连接状况，如果您使用有限网路请确认网线是否插好</p>
+                        </span>
+                        <span>
+                            <p><span class="q">Q: </span>提示(未检测到任何网络,请检查本设备是否联网)怎么办?</p>
+                            <p>请检查电路和路由器连接状况，如果您使用有限网路请确认网线是否插好</p>
+                        </span>
+                        <span class="next">
+                            <p>﹀</p>
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <p>显示问题</p>
+                    <div class="qes" style="display: none;">
+                        <span>
+                            <p><span class="q">Q: </span>提示(未检测到任何网络,请检查本设备是否联网)怎么办?</p>
+                            <p>请检查电路和路由器连接状况，如果您使用有限网路请确认网线是否插好</p>
+                        </span>
+                        <span>
+                            <p><span class="q">Q: </span>提示(未检测到任何网络,请检查本设备是否联网)怎么办?</p>
+                            <p>请检查电路和路由器连接状况，如果您使用有限网路请确认网线是否插好</p>
+                        </span>
+                        <span>
+                            <p><span class="q">Q: </span>提示(未检测到任何网络,请检查本设备是否联网)怎么办?</p>
+                            <p>请检查电路和路由器连接状况，如果您使用有限网路请确认网线是否插好</p>
+                        </span>
+                        <span class="next">
+                            <p>﹀</p>
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <p>App适用终端范围</p>
+                    <div class="qes" style="display: none;">
+                        <span>
+                            <p><span class="q">Q: </span>提示(未检测到任何网络,请检查本设备是否联网)怎么办?</p>
+                            <p>请检查电路和路由器连接状况，如果您使用有限网路请确认网线是否插好</p>
+                        </span>
+                        <span>
+                            <p><span class="q">Q: </span>提示(未检测到任何网络,请检查本设备是否联网)怎么办?</p>
+                            <p>请检查电路和路由器连接状况，如果您使用有限网路请确认网线是否插好</p>
+                        </span>
+                        <span>
+                            <p><span class="q">Q: </span>提示(未检测到任何网络,请检查本设备是否联网)怎么办?</p>
+                            <p>请检查电路和路由器连接状况，如果您使用有限网路请确认网线是否插好</p>
+                        </span>
+                        <span class="next">
+                            <p>﹀</p>
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <p>内容</p>
+                    <div class="qes" style="display: none;">
+                        <span>
+                            <p><span class="q">Q: </span>提示(未检测到任何网络,请检查本设备是否联网)怎么办?</p>
+                            <p>请检查电路和路由器连接状况，如果您使用有限网路请确认网线是否插好</p>
+                        </span>
+                        <span>
+                            <p><span class="q">Q: </span>提示(未检测到任何网络,请检查本设备是否联网)怎么办?</p>
+                            <p>请检查电路和路由器连接状况，如果您使用有限网路请确认网线是否插好</p>
+                        </span>
+                        <span>
+                            <p><span class="q">Q: </span>提示(未检测到任何网络,请检查本设备是否联网)怎么办?</p>
+                            <p>请检查电路和路由器连接状况，如果您使用有限网路请确认网线是否插好</p>
+                        </span>
+                        <span class="next">
+                            <p>﹀</p>
+                        </span>
+                    </div>
+                </li>
+            </ul>
+         </div>
+</div>
+</body>
+<script src="../../js/jquery-1.12.4.min.js"></script>
+<script src="../../js/common.js"></script>
+<script type="text/javascript">
+    // 键盘事件开始
+    $(function() {
+        var jqThis;
+        var colThis;
+        $(window).keydown(function (e) {
+            $('.li li').each(function () { // 左右的this
+                if ($(this).hasClass('active')) {
+                    jqThis = $(this)
+                }
+            });
+
+            if(e.keyCode==39){ // 右-39
+                if (jqThis.next().length === 0) { // 这是到头啦
+                    jqThis.parents('.li').find('li').eq(0).addClass('active')
+                    jqThis.parents('.li').find('li').eq(0).children(".qes").css('display','block')
+                }
+                jqThis.removeClass('active')
+                jqThis.children(".qes").css('display','none')
+                jqThis.next().addClass('active')
+                jqThis.next().children(".qes").css('display','block')
+            }
+            if(e.keyCode==37){ // 左-37
+                if (jqThis.prev().length === 0) { // 这是到头啦
+                    jqThis.parents('.li').find('li').last().addClass('active')
+                    jqThis.parents('.li').find('li').last().children(".qes").css('display','block')
+                }
+                jqThis.removeClass('active') //
+                jqThis.children(".qes").css('display','none')
+                jqThis.prev().addClass('active')
+                jqThis.prev().children(".qes").css('display','block')
+            }
+            if(e.keyCode==13){ // enter
+                var type_index = jqThis.attr("tabindex")
+            }
+            // 返回上一页
+            if (e.keyCode == 8) { // backspace
+                window.history.go(-1)
+            }
+        })
+    })
+
+
+</script>
+</html>

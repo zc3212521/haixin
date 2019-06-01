@@ -1,0 +1,210 @@
+/*general*/
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/** 清除内外边距 **/
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+form, fieldset, legend, button, input, textarea, /* form elements 表单元素 */
+th, td /* table elements 表格元素 */ {
+  margin: 0;
+  padding: 0;
+}
+
+/*html,body{
+  width: 100%;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+}*/
+
+body{
+  background-size: 100% 100%;
+  word-break:break-all;
+  font-size: 16px;
+  background-attachment: fixed;
+  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', SimSun, sans-serif;
+}
+
+ul, ol{
+  list-style-type: none;
+}
+
+button, input, select, textarea{
+  -webkit-appearance: none;
+  outline: none;
+  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', SimSun, sans-serif;
+}
+
+input::-webkit-outer-spin-button,input::-webkit-inner-spin-button{
+  -webkit-appearance:textfield;
+}
+
+input[type="number"]{
+  -moz-appearance:textfield;
+}
+
+button::-moz-focus-inner{
+  border: 0;
+}
+
+img{
+  display:block;
+  margin:0;
+  padding:0;
+}
+
+a{
+  text-decoration:none;
+}
+
+i{
+  font-style: normal;
+}
+
+p{
+  word-wrap:break-word;
+  text-align: justify;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+}
+
+/*font reference*/
+/*@font-face { */
+  /*font-family: ;*/
+  /*src: url('../font/');*/
+/*}*/
+
+.addTable:before{
+  content: "";
+  display: table;
+}
+
+.clear:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.clear{
+  *zoom:1;
+}
+
+/*button active*/
+.active:active{
+  background-color: #999;
+  opacity: 0.3;
+}
+
+.active2:active{
+  background-color: #c2a05b;
+}
+
+/*end*/
+
+/*button style*/
+.button-one input{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+  background-color: #f14131;
+  border-radius: 5px;
+  border: 0;
+  font-size: 18px;
+  width: 80%;
+  margin-left: 10%;
+}
+
+.button-two input{
+  float: left;
+  margin: 20px 0 20px 10%;
+  width: 35%;
+  height: 35px;
+  line-height: 35px;
+  color: #fff;
+  border-radius: 5px;
+  border: 0;
+}
+
+.inputColor1{
+  background-color: #3d84c9;
+}
+
+.inputColor2{
+  background-color: #6f6f6f;
+}
+/*end*/
+
+/*popup style*/
+ .window{
+  display: none;
+ }
+
+ .closeInput{
+  position: absolute;
+  right: -7px;
+  top: -7px;
+  width:20px;
+  height: 20px;
+  background-size: 100%;
+  background-color: red;
+ }
+
+.maskLayer{
+  position: absolute;
+  background-color: black;
+  z-index: 9;
+  -moz-opacity: 0.5;
+  opacity: .5;
+  filter: alpha(opacity=50);
+  top:0;
+  width: 100%;
+  height: 100%;
+}
+
+.load{
+  position: fixed;
+  z-index: 10;
+  height: 80px;
+  top: 50%;
+  margin-top: -35px;
+  width: 100%;
+}
+
+.load img{
+  width: 50px;
+  height: 50px;
+  margin: auto;
+}
+
+.load p{
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+}
+
+.popBox{
+  position: fixed;
+  width:80%;
+  margin-left: 10%;
+  border: 1px;
+  border-radius: 6px;
+  background-color: #e3e3e3;
+  z-index: 10;
+}
+
+.popBox h3{
+  text-align: center;
+  line-height: 60px;
+  font-size: 20px;
+  color: #1E1E1E;
+}
+/*end*/

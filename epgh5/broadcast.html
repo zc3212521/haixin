@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8 />
+	<title>videojs-contrib-hls embed</title>
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/detail_p.css">
+ 	<link href="./css/video-js.css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="js/vedio.js"></script>
+	<script>
+        $(document).ready(function(){ videoControl()});
+	</script>
+	<script src="./js/video-js.js"></script>
+	<script src="./js/video-contrib-hls.js"></script>
+	<style>
+		.vjs-fullscreen{
+			position: fixed;
+		}
+	</style>
+</head>
+<body>
+	<video id="vids"
+		   class="video-js vjs-default-skin vjs-fullscreen vjs-big-play-centered"
+		   preload="auto"
+		   autoplay="autoplay"
+		   muted
+		   data-setup='{}'>
+			<!--<source src="http://globalcdn.miguvideo.com:8088/play4/ac41b18bdde9ffc337ce22cde657f4ff.m3u8"-->
+			<!--type="application/x-mpegURL">-->
+		<source src="http://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8"
+				type="application/x-mpegURL">
+
+	</video>
+	<div id="pass">
+		<!--<img src="media/zt.png">-->
+		<i style="color: #fff;" id="bf" class="iconfont icon-bofang2 animated fadeOut"></i>
+	</div>
+	<!--控制器-->
+	<!--<div class="controls animated slideOutDown" id="controls">-->
+	<div class="controls" id="controls">
+
+	<!--标题-->
+		<div class="title_top">
+			06镇魂
+		</div>
+		<!--进度条容器-->
+		<div id="pBar">
+			<!--进度条底色-->
+			<div class="pBar_bj">
+				<!--缓冲的进度条-->
+				<div id="buff"></div>
+				<!--进度条动态-->
+				<div id="pBar_move">
+					<!--进度条按钮-->
+					<div id="pBtn"></div>
+				</div>
+			</div>
+		</div>
+		<!--展厅播放快进快退音量全屏-->
+		<div class="trol_list">
+			<!--暂停和快进快退-->
+			<div class="list_1">
+				<i class="iconfont icon-kuaitui" onClick="ktui()"></i>
+				<i class="iconfont  icon-bofang" id="ztbf"></i>
+				<i class="iconfont icon-kuaijin" onClick="kjin()"></i>
+			</div>
+			<!--&lt;!&ndash;音量&ndash;&gt;-->
+			<div class="voice" style="display: none;">
+				<i class="iconfont icon-yinliang" style="float:left;"></i>
+				<div class="voicep">
+					<div id="vBar">
+						<div id="vBar_in"></div>
+					</div>
+					<div id="vBtn"></div>
+				</div>
+			</div>
+			<!--时间-->
+			<div class="vtime">
+				<font id="nTime">00:00:00</font><em id="aTime">00:00:00</em>
+			</div>
+			<!--全屏-->
+			<i style="display: none" id="qp" class="iconfont icon-quanping"></i>
+		</div>
+	</div>
+
+
+
+</body>
+</html>

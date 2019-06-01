@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>用户反馈选项页</title>
+    <meta charset="UTF-8">
+     <link href="../../css/common.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/personal.css">
+     <link rel="stylesheet" href="../../css/animated.css">
+</head>
+
+<body class="black">
+<div class="page-content animated slideInUp">
+
+        <div class="sel_lr">
+            <img src="../../img/logo.png" alt="">
+            <span id="sel_time"></span>
+        </div>
+        <div class="personal per_aty per_col">
+            <ul class="xm_list">
+                <li tabindex="0" class="li active">
+                    <img src="../../img/user/changjianwenti.png">
+                    <p>常见问题</p>
+                </li>
+                <li tabindex="1" class="li">
+                    <img src="../../img/user/wentifankui.png">
+                    <p>问题反馈</p>
+                </li>
+             </ul>
+         </div>
+</div>
+</body>
+<script src="../../js/jquery-1.12.4.min.js"></script>
+<script src="../../js/common.js"></script>
+<script type="text/javascript">
+    // 是否登录  true登录 false 未登录
+    var logins = false
+    if (logins){
+        $("#loginName").html('10293490@qq.com')
+    }else {
+        $("#loginName").html('未登录')
+
+    }
+
+    // 键盘事件开始
+    $(function() {
+        var jqThis;
+        var colThis;
+         $(window).keydown(function (e) {
+             $('.li').each(function () { // 左右的this
+                if ($(this).hasClass('active')) {
+                    jqThis = $(this)
+                 }
+            });
+            $('.per_col').each(function () { // 上下的this
+                if ($(this).hasClass('per_aty')) {
+                    colThis = $(this)
+                }
+            });
+            if(e.keyCode==40){ // 下 滑到下一页
+
+            }
+            if(e.keyCode==39){ // 右-39
+                if (jqThis.next().length === 0) { // 这是到头啦
+                    jqThis.parents('.xm_list').find('.li').eq(0).addClass('active')
+                }
+                jqThis.removeClass('active')
+                jqThis.next().addClass('active')
+            }
+            if(e.keyCode==37){ // 左-37
+                if (jqThis.prev().length === 0) { // 这是到头啦
+                    jqThis.parents('.xm_list').find('.li').last().addClass('active')
+                }
+                jqThis.removeClass('active') //
+                jqThis.prev().addClass('active')
+            }
+            if(e.keyCode==13){ // enter
+                var type_index = jqThis.attr("tabindex")
+                switch (type_index) {
+                    case '0':
+                        window.location.href='//历史记录';
+                        break;
+                    case '1':
+                        window.location.href='//我的收藏';
+                        break;
+                    case '2':
+                        window.location.href='//未登录';
+                        break;
+                    case '3':
+                        window.location.href='//开通VIP';
+                        break;
+                    case '4':
+                        window.location.href='//用户反馈';
+                        break;
+                    case '5':
+                        window.location.href='//设置';
+                        break;
+                }
+            }
+            // 返回上一页
+            if (e.keyCode == 8) { // backspace
+                window.history.go(-1)
+            }
+        })
+
+        // 返回当前集数的 index
+        function mod() {
+            var index = 0
+            $(".setNumber .li").each(function (item,i) {
+                if ($(this).css('display') == 'inline-block') {
+                    index = $(this).index()
+                }
+            })
+            return index
+        }
+    })
+
+
+</script>
+</html>

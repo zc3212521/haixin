@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>开关</title>
+    <style>
+       .right {
+            width:66px;
+            height:36px;
+            padding:3px;
+            border-radius: 30px;
+            -webkit-border-radius:30px;
+            -moz-border-radius:30px;
+            background-color: #838383;
+            position: relative;
+        }
+        .right .btnn {
+            width:30px;
+            height:30px;
+            -webkit-border-radius:30px;
+            -moz-border-radius:30px;
+            border-radius:30px;
+            background-color: #fff;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+<div class="right">
+    <div isopen="false" class="btnn"></div>
+</div>
+</body>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+    $(function(){
+        $('.btnn').on('click',function(){
+            if ($(this).attr('isopen') == 'false') {
+                $(this).attr('isopen','true').animate({left:'33px'});
+                $(this).parent().css('background-color','green');
+            } else {
+                $(this).attr('isopen','false').animate({left:'3px'});
+                $(this).parent().css('background-color','#838383');
+            }
+        });
+    });
+</script>
+</html>

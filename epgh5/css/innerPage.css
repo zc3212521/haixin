@@ -1,0 +1,135 @@
+.inner_page{
+    margin-left: 31vmin;
+}
+.inner_sel{
+    height: 86vmin;
+    overflow-y: scroll;
+    padding-left: 3vmin;
+    padding-bottom: 2vmin;
+    display: none;
+}
+.inner_sel li{
+    display: inline-block;
+    margin-right: 2vmin;
+    width: 28.6vmin;
+    margin-top: 2vmin;
+    position: relative;
+}
+.inner_sel li span{
+    position: absolute;
+    bottom: 2.5vmin;
+    left: 2vmin;
+    display: block;
+    width: 100%;
+}
+.inner_sel li span p:nth-child(1){
+    color: rgba(255,255,255,.6);
+}
+.inner_sel li span p{
+    margin-right: 5vmin;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    color: #fff;
+    font-size:2vmin;
+}
+
+/*.game_width{*/
+    /*display: none;*/
+/*}*/
+.inner_aty{
+    display: block;
+}
+.game_width li{
+    width: 49.3vmin;
+}
+.inner_sel li img{
+    width: 100%;
+    border: 2px solid rgba(0,0,0,0);
+}
+.inner_sel li.active img{
+    border: 2px solid #fff;
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
+}
+.tv_nav{
+    width: 28.6vmin;
+    height:100vmin;
+    position: fixed;
+    left: 1vmin;
+    top: 0;
+ }
+.inner_content{
+    padding-top: 5vmin;
+}
+.inner_tit{
+    padding-left: 3vmin;
+}
+.inner_tit span{
+    font-size: 2.6vmin;
+}
+.inner_tit p{
+    font-size: 2vmin;
+}
+.nav_list{
+    margin-top: 5vmin;
+}
+.nav_list li{
+    width: 12.6vmin;
+    height: 5vmin;
+    margin-top: 2vmin;
+    margin: 2vmin auto;
+    line-height: 5vmin;
+    text-align: center;
+    color: #fff;
+    font-size: 1.8vmin;
+}
+.nav_list li a{
+    color: #fff;
+}
+.nav_list li.active{
+    background: -webkit-gradient(linear,0% 0%, 100% 0%, from(#0385CA), to(#4F5FBD));
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+.inner_search{
+    margin-top: 9vmin;
+    /*width: 12.6vmin;*/
+}
+.icon-sous{
+    font-size: 2.4vmin;
+    margin-left: 6vmin;
+}
+.inner_search input{
+    width: 12.6vmin;
+    height: 2.4vmin;
+    font-size: 1.8vmin;
+    border: none;
+    color: #fff;
+    background:rgba(0,0,0,0)  ;
+    border-bottom: .1vmin solid #4c4c4c;
+    outline: none;
+}
+#anchor li{
+    width: 27.2vmin;
+    margin-top: 10vmin;
+}
+#anchor li span{
+    text-align: center;
+}
+#anchor li span p{
+    color: #fff;
+}
+#anchor li img{
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+#anchor li.active img{
+    transform: scale(1.1);
+}
+

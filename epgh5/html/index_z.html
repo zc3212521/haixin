@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <title>精选页面</title>
+  <meta charset="UTF-8">
+  <link href="../css/common.css" type="text/css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/details.css">
+  <link rel="stylesheet" href="../css/selOwerIndex.css">
+  <link rel="stylesheet" href="../css/animated.css">
+</head>
+<body class="" style="background: #000;">
+<div class="page-content bgSel jingxuan current">
+  <div id="animate" class="animated  fadeInDown" >
+    <div class="index_up">
+      <img src="../img/up.png" alt="">
+    </div>
+    <div class="sel_lr sel_opacity">
+      <img src="../img/logo.png" alt="">
+      <span id="sel_time"></span>
+    </div>
+    <div class="col tuijian tj_bottom">
+      <div class="index_ds sel">
+        <p class="index_zi sel_title">都挺好(2019)</p>
+        <p class="sel_des">精神虐待能对被伤害着产生毁灭性的影响</p>
+        <p class="sel_type">类型: <span>剧集 / 家庭</span></p>
+        <p class="sel_type actor">姚晨 / 倪大红 / 郭京飞 / 杨祐宁 / 李念 等</p>
+      </div>
+      <div class="videoList" style="position: relative;bottom: 0; padding:0;">
+        <!-- 剧集推荐 把默认放在了这里-->
+        <div class="ulWrap">
+          <ul class="tj sel_li aty">
+            <li tabindex="0"  data-type ='0' class="li yutobe active">
+              <img src="../img/selected/1.png" alt="image01" />
+              <!--<span>-->
+              <!--<img  src="../img/selected/yutube.png">-->
+              <!--</span>-->
+            </li>
+            <li tabindex="1" class="li " data-type ='1'>
+              <img src="../img/selected/2.png" alt="image02" />
+              <span>
+                                    <!--<img src="../img/selected/vip.png">-->
+                                </span>
+            </li>
+            <li tabindex="2" class="li" data-type ='2'>
+              <img src="../img/selected/3.png" alt="image04" />
+              <span>
+                                    <img src="../img/selected/vip.png">
+                                </span>
+            </li>
+            <li tabindex="3" class="li">
+              <img src="../img/selected/4.png" alt="image05" />
+              <span>
+                                    <img src="../img/selected/vip.png">
+                                </span>
+            </li>
+            <li tabindex="4" class="li">
+              <img src="../img/selected/5.png" alt="image06" />
+
+            </li>
+            <li tabindex="5" class="li">
+              <img src="../img/selected/6.png" alt="image01" />
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="index_down">
+        <img src="../img/down.png" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+<!--<div class="img_bgs">-->
+<!--<img src="../img/bg.jpg" alt="美图" class="bg slideLeft" id="bg1" />-->
+<!--</div>-->
+
+</body>
+
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script src="../js/common.js"></script>
+<script>
+  preloadImg(['../img/selected/1.jpg','../img/selected/2.jpg','../img/selected/3.jpg','../img/selected/4.jpg','../img/selected/5.jpg','../img/selected/6.jpg']);
+</script>
+<script type="text/javascript">
+
+
+
+  // 键盘事件开始
+  $(function() {
+    var currentPage = 'jingxuan'
+    var jx_jqThis;
+    var jx_colThis;
+    var jx_startAnimate = false
+    var jx_seltWidth;
+    var totalWhidth = document.documentElement.scrollWidth;
+    $(window).keydown(function (e) {
+      // console.log(e.keyCode)
+      $('.li').each(function () { // 左右的this
+        if ($(this).hasClass('active')) {
+          jx_jqThis = $(this)
+          jx_seltWidth = $(this).width() + 80
+        }
+      });
+      $('.col').each(function () { // 上下的this
+        if ($(this).hasClass('aty')) {
+          jx_colThis = $(this)
+        }
+      });
+      // console.log(e.keyCode)
+      if(e.keyCode==38){ // 上
+        // $("body").attr("class","animated slideOutUp")
+        // $("body").addClass("black")
+        // setTimeout(function () {
+        //     window.location.href='personal/login.html'
+        // },1000)
+      }
+      if(e.keyCode==40){ // 下 跳到精选次屏
+        $("body").attr("class","animated slideOutUp")
+        $(".bgSel").attr("class",'animated fadeOut')
+        $("body").css({'background':"-webkit-gradient(linear,0% 0%, 100% 0%, from(#1B1C20), to(#0C0C0E))",})
+        setTimeout(function () {
+          window.location.href='index_c.html'
+        })
+      }
+      if(e.keyCode==39){ // 右-39
+        var id = parseInt(jx_jqThis.attr("tabIndex"))+1
+        if (jx_jqThis.parents().hasClass('tuijian')) {
+          if (!jx_startAnimate) {
+            jx_startAnimate = true
+            jx_jqThis.removeClass('active')
+            if (jx_jqThis.next().length === 0) { // 这是到头啦
+              jx_jqThis.parents('.aty').find('.li').eq(0).addClass('active')
+              jx_jqThis.parents('.tj').animate({
+                left: '0px'
+              })
+              jx_startAnimate = false
+              select(0)
+              return
+            }else {
+              select(id)
+            }
+            if (totalWhidth - jx_seltWidth - jx_jqThis.next().position().left <= 20) {
+              jx_jqThis.parents('.tj').animate({
+                left: totalWhidth - jx_seltWidth - jx_jqThis.next().position().left - 40 + 'px'
+              })
+            }
+            jx_jqThis.next().addClass('active')
+          }
+
+        }
+      }
+      if(e.keyCode==37){ // 左-37
+        if (jx_jqThis.parents().hasClass('tuijian')) {
+          var id = 0
+          if (!jx_startAnimate) {
+            jx_startAnimate = true
+            jx_jqThis.removeClass('active')
+            if(jx_jqThis.parent().hasClass('tj')){ // 父元素是1
+              if (jx_jqThis.prev().length === 0) { // 这是到头啦
+                jx_jqThis.parents('.aty').find('.li').last().addClass('active')
+                jx_jqThis.parents('.tj').animate({
+                  left: totalWhidth - jx_seltWidth - jx_jqThis.parents('.tj').find('.li').last().position().left - 50 + 'px'
+                })
+                jx_startAnimate = false
+                id = jx_jqThis.parents('.aty').find('.li').last().attr("tabIndex")
+                select(id)
+                return
+              }else {
+                id = parseInt(jx_jqThis.attr("tabIndex"))-1
+                select(id)
+              }
+              if (jx_jqThis.prev().offset().left <= 20) {
+                jx_jqThis.parents('.tj').animate({
+                  left: 10 - jx_jqThis.prev().position().left + 'px'
+                })
+              }
+              jx_jqThis.prev().addClass('active')
+            }
+          }
+
+        }
+      }
+      if(e.keyCode==13){ // enter
+        var type = jx_jqThis.attr("data-type")
+        if (type === '0'){ // 电视
+          window.location.href='details.html'
+        }else if (type === '1'){ // 综艺
+          window.location.href='detailszy.html'
+        }else if (type === '2'){ // 电影
+          window.location.href='detailsSingle.html'
+        }
+
+      }
+      // 返回上一页
+      if (e.keyCode == 8) { // Backspace键
+        window.history.go(-1)
+      }
+      setTimeout(function () {
+        jx_startAnimate = false
+      }, 200)
+    })
+
+    // 返回当前集数的 index
+    function mod() {
+      var index = 0
+      $(".setNumber .li").each(function (item,i) {
+        if ($(this).css('display') == 'inline-block') {
+          index = $(this).index()
+        }
+      })
+      return index
+    }
+    // 剧集
+    function number(str) {
+      var arr = str.split('-')
+      console.log(arr)
+      var start = 0
+      var end = 0
+      if (arr.length>1) {
+        start = parseInt(arr[0])
+        end = parseInt(arr[1])
+      }else { // =1
+        start = parseInt(arr[0])
+        end = parseInt(arr[0])
+      }
+      $(".setNumber .li").each(function (item,i) {
+        if (start<=end) {
+          $(this).show()
+          $(this).children().html(start)
+          start = start+1
+        } else {
+          $(this).hide()
+        }
+      })
+    }
+
+    function scrollToEnd(){//滚动到底部
+      var h = $(document).height()-$(window).height();
+      $(document).scrollTop(h);
+    }
+  })
+
+  // 每点击一下键盘就
+  // select(0)
+  function select(id) {
+    var jsonData = [
+      {"name":"都挺好",
+        "desc": "精神虐待能对被伤害着产生毁灭性的影响精神虐待能对被伤害着产生毁灭性的影响",
+        "type": "剧集/家庭",
+        "actor": "姚晨 / 倪大红 / 郭京飞 / 杨祐宁 / 李念 等",
+        "bgImg": '../img/selected/1.jpg'
+      },
+      {"name":"都挺好1",
+        "desc": "精神虐待能对被伤害着产生毁灭性的影响",
+        "type": "剧集/家庭",
+        "actor": "姚晨1 / 倪大红1 / 郭京飞1 / 杨祐宁1 / 李念1 等",
+        "bgImg": '../img/selected/2.jpg'
+      },
+      {"name":"都挺好2",
+        "desc": "精神虐待能对被伤害着产生毁灭性的影响",
+        "type": "剧集/家庭",
+        "actor": "姚晨2 / 倪大红2 / 郭京飞2 / 杨祐宁2 / 李念2 等",
+        "bgImg": '../img/selected/3.jpg'
+      },
+      {"name":"都挺好3",
+        "desc": "精神虐待能对被伤害着产生毁灭性的影响",
+        "type": "剧集3/家庭6",
+        "actor": "姚晨3 / 倪大红3 / 郭京飞3 / 杨祐宁3 / 李念3 等",
+        "bgImg": '../img/selected/4.jpg'
+      },
+      {"name":"都挺好4",
+        "desc": "精神虐待能对被伤害着产生毁灭性的影响",
+        "type": "剧集5/家庭6",
+        "actor": "姚晨4 / 倪大红4 / 郭京飞4 / 杨祐宁4 / 李念4 等",
+        "bgImg": '../img/selected/5.jpg'
+      },
+      {"name":"都挺好5",
+        "desc": "精神虐待能对被伤害着产生毁灭性的影响",
+        "type": "剧集3/家庭4",
+        "actor": "姚晨5 / 倪大红5 / 郭京飞5 / 杨祐宁5 / 李念5 等",
+        "bgImg": '../img/selected/6.jpg'
+      }
+    ]
+
+    $(".sel_title").html(jsonData[id].name)
+    $(".sel_des").html(jsonData[id].desc)
+    $(".sel_type").html(jsonData[id].type)
+    $(".actor").html(jsonData[id].actor)
+    $(".jingxuan").css({
+      "background":"url("+jsonData[id].bgImg+")",
+      "width": "100%",
+      "height": "100%",
+      "background-size": "cover",
+      "background-attachment": "fixed",
+      "position": "absolute",
+      "background-position":"center center"})
+
+  }
+</script>
+</html>

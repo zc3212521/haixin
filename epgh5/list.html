@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>视频列表</title>
+    <meta charset="UTF-8">
+    <link href="css/global.css" type="text/css" rel="stylesheet">
+    <link href="css/common.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="page-content listbg">
+       <div class="videoList">
+           <div class="ulWrap">
+               <ul class="top">
+                   <li tabindex="1" class="active li">
+                       <img src="img/m.jpg">
+                       <p>环太平洋 雷霆再起</p>
+                   </li>
+                   <li tabindex="2" class="li">
+                       <img src="img/m.jpg">
+                       <p>环太平洋 雷霆再起</p>
+                   </li>
+                   <li tabindex="3" class="li">
+                       <img src="img/m.jpg">
+                       <p>环太平洋 雷霆再起</p>
+                   </li>
+                   <li tabindex="4" class="li">
+                       <img src="img/m.jpg">
+                       <p>环太平洋 雷霆再起</p>
+                   </li>
+                   <li tabindex="5" class="li">
+                       <img src="img/m.jpg">
+                       <p>环太平洋 雷霆再起</p>
+                   </li>
+                   <li tabindex="6" class="li">
+                       <img src="img/m.jpg">
+                       <p>环太平洋 雷霆再起</p>
+                   </li>
+                   <li tabindex="7" class="li">
+                       <img src="img/m.jpg">
+                       <p>环太平洋 雷霆再起</p>
+                   </li>
+                   <li tabindex="8" class="li">
+                       <img src="img/m.jpg">
+                       <p>环太平洋 雷霆再起</p>
+                   </li>
+                   <li tabindex="9" class="li">
+                       <img src="img/m.jpg">
+                       <p>环太平洋 雷霆再起</p>
+                   </li>
+                   <li tabindex="10" class="li">
+                       <img src="img/m.jpg">
+                       <p>环太平洋 雷霆再起</p>
+                   </li>
+               </ul>
+			   <ul><li style="color:#fff">当前版本1.2</li></ul>
+           </div>
+				
+       </div>
+    </div>
+    <!--设备id弹窗，之后有接口，可以去掉-->
+    <div class="alert" style="display:none">
+        <div>
+            <div class="con">
+                <p class="devTit">设备ID为:</p>
+                <p class="id">7</p>
+                <span class="btns">确定</span>
+            </div>
+
+        </div>
+    </div>
+</body>
+<script>
+window.onload = function () {
+
+}
+</script>
+<script src="js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+// 页面加载的时候 获取设备id的函数
+// getDevId()
+// function getDevId(){
+//
+// }
+
+$(function() {
+    var jqThis;
+    var seltWidth;
+    var len = 1;
+    var startAnimate = false
+    var totalWhidth = document.documentElement.scrollWidth;
+    $(window).keydown(function (e) {
+        console.log(e.keyCode)
+
+        if (!startAnimate) {
+            startAnimate = true
+            $('.li').each(function () {
+                if ($(this).hasClass('active')) {
+                    jqThis = $(this)
+                    seltWidth = $(this).width() + 20
+                }
+            });
+            if(e.keyCode==39){ // 右-39
+                if(jqThis.parent().hasClass('top')){ // 父元素是1
+                    jqThis.removeClass('active')
+                    if (jqThis.next().length === 0) { // 这是到头啦
+                        jqThis.parents('.top').find('.li').eq(0).addClass('active')
+                        jqThis.parents('.top').animate({
+                            left: '0px'
+                        })
+                        startAnimate = false
+                        return
+                    }
+                    // jqThis.scrollLeft(200)
+                    if (totalWhidth - seltWidth - jqThis.next().position().left <= 20) {
+                        jqThis.parents('.top').animate({
+                            left: totalWhidth - seltWidth - jqThis.next().position().left - 40 + 'px'
+                        })
+                    }
+                    jqThis.next().addClass('active')
+                }
+            }
+            if(e.keyCode==37){ // 左-37
+                jqThis.removeClass('active')
+                if(jqThis.parent().hasClass('top')){ // 父元素是1
+                    if (jqThis.prev().length === 0) { // 这是到头啦
+                        jqThis.parents('.top').find('.li').last().addClass('active')
+                        jqThis.parents('.top').animate({
+                            left: totalWhidth - seltWidth - jqThis.parents('.top').find('.li').last().position().left - 50 + 'px'
+                        })
+                        startAnimate = false
+                        return
+                    }
+                    if (jqThis.prev().offset().left <= 20) {
+                        jqThis.parents('.top').animate({
+                            left: 10 - jqThis.prev().position().left + 'px'
+                        })
+                    }
+                    jqThis.prev().addClass('active')
+                }
+            }
+            // if(e.keyCode==38){ // 上
+            //     if(jqThis.parent().hasClass('l')){ // 在本行内
+            //         if(jqThis.index()==0){ // 并且到头了
+            //             jqThis.removeClass('active')
+            //             jqThis.parents('.box').prev().find('.ee').eq(0).addClass('active')
+            //         }else{
+            //             jqThis.prev().addClass('active')
+            //             jqThis.removeClass('active')
+            //         }
+            //     }
+            // }
+            // if(e.keyCode==40){ // 下
+            //     if(jqThis.parent().hasClass('top')){
+            //         jqThis.removeClass('active')
+            //         jqThis.parents('.top').next().find('.li').eq(0).addClass('active')
+            //     }
+            // }
+            if(e.keyCode==13){ // 左-37 上-38 右-39 下-40
+                console.log()
+                if ($('.alert').css('display') == 'flex'){
+                    $('.alert').hide(500)
+                }else {
+                    window.location.href="videoInfo.html";
+                }
+            }
+            setTimeout(function () {
+                startAnimate = false
+            }, 200)
+        }
+
+    })
+})
+</script>
+</html>

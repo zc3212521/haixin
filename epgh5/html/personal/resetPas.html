@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>个人中心-重置密码</title>
+    <meta charset="UTF-8">
+     <link href="../../css/common.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/personal.css">
+     <link rel="stylesheet" href="../../css/animated.css">
+</head>
+
+<body class="black">
+<div class="page-content animated slideInUp">
+
+        <div class="sel_lr">
+            <img src="../../img/logo.png" alt="">
+            <span id="sel_time"></span>
+        </div>
+        <div class="personal updpass resetPass">
+            <span class="active email">
+                <input id="y_pas" autofocus="autofocus" type="text" placeholder="已注册邮箱">
+            </span>
+            <span class="gety"><em id="y_text">获取验证码</em></span>
+            <span class="">
+                <input id="y_yan" autofocus="autofocus" type="text" placeholder="验证码">
+            </span>
+            <span>
+                <input id="y_newPas" type="password" placeholder="新密码(6-16位数字，字母或符号)">
+            </span>
+            <p class="updOk">
+                重置密码
+            </p>
+        </div>
+</div>
+</body>
+<script src="../../js/jquery-1.12.4.min.js"></script>
+<script src="../../js/common.js"></script>
+<script type="text/javascript">
+
+  passWords()
+
+
+</script>
+</html>

@@ -1,0 +1,233 @@
+.bg{
+    position: absolute;
+    width: 102%;
+    height: 102%;
+    /*background: url(../img/play_bg.png);*/
+    background: url("../img/selected/1.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    position: absolute;
+    background-position: center center;
+    filter: blur(7px);
+    left: -1%;
+}
+.bg_color{
+    color: #8b8f9f;
+}
+.bg_color li {
+    background: rgba(255,255,255,.2);
+}
+.black{
+    background: -webkit-gradient(linear,0% 0%, 100% 0%, from(#1B1C20), to(#0C0C0E));
+}
+.tops{
+    margin-top: 4vmin;
+}
+.videoCon div>p{
+    margin-top: 2vmin;
+    font-size: 2vmin;
+    color: rgba(255,255,255,.7);
+    line-height: 3vmin;
+}
+.videoCon h3{
+    color: #fff;
+}
+.videoCon h6{
+    line-height: 3.5vmin;
+}
+.tops li{
+    width: 18.8vmin !important;
+    height: 11.4vmin;
+    -webkit-border-radius: .5vmin;
+    -moz-border-radius: .5vmin;
+    border-radius: .5vmin;
+    line-height: 12vmin;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.tops li:nth-child(2){
+    left: 21.8vmin;
+}
+.tops li:nth-child(3){
+    left: 48vmin;
+    width:70vmin !important;
+    height: 12vmin !important;
+}
+.tops li img{
+    width: 5.3vmin;
+    height: 5.4vmin;
+    margin-left: 0;
+    float: left;
+    margin-top: 3.3vmin;
+
+}
+.tops li p{
+    float: left;
+    line-height: 12vmin;
+    margin-left: -3vmin;
+}
+.videoInfo li{
+    background: rgba(255,255,255,.2);
+}
+.tj li{
+    background: rgba(0,0,0,0);
+}
+.setNumber li{
+    position: relative;
+}
+.setNumber img{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 5.7vmin;
+    height: 2.9vmin;
+}
+.setNumber .active img {
+    outline: none;
+    border: none;
+}
+.selectNumber{
+    color: #fff;
+    margin-bottom: 1.7vmin;
+}
+.selectNumber li{
+    background: rgba(0,0,0,0);
+    border: 1px solid rgba(0,0,0,0);
+}
+.selectNumber li.active,
+.setNumber li.active{
+    font-weight: 400;
+}
+.setNumber li{
+    padding: 0 !important;
+    width: 10vmin;
+    height: 10vmin;
+    text-align: center;
+    line-height: 10vmin;
+    border: 2px solid rgba(0,0,0,0);
+}
+
+.selectNumber .active {
+    background: rgba(255,255,255,.2);
+    border: 1px solid rgba(255,255,255,.6);
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+.setNumber li.active,
+.aty .tops li:nth-child(1).active,
+.aty .tops li:nth-child(2).active,
+.aty .tops li:nth-child(3).active{
+    background: -webkit-gradient(linear,0% 100%, 100% 0%, from(#0385CA), to(#4F5FBD)) !important;
+    border: 2px solid #fff !important;
+}
+
+.zySetNum li{
+    width: 25vmin;
+    /*height: 9.7vmin;*/
+    font-size: 1.6vmin;
+    line-height: 2.7vmin;
+    padding: 2vmin 1vmin !important;
+    height: 7.7vmin !important;
+}
+.zySetNum li>span{
+    color: #ccc;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    overflow: hidden;
+    white-space: pre-wrap;
+    text-overflow: ellipsis;
+     /*margin: 2vmin 1vmin;*/
+}
+.zySetNum li.active{
+    background: rgba(255,255,255,.2) !important;
+
+}
+.zySetNum li.active>span{
+    color: #fff !important;
+}
+.videoCon{
+    padding: 20vmin 18.5vmin;
+}
+.details_page{
+    padding: 9.8vmin 18.5vmin 6.2vmin 20vmin;
+    display: flex;
+    justify-content: flex-start;
+}
+.details_page>img{
+    width: 34vmin;
+    height:46vmin;
+}
+.detail_title{
+    width:115vmin !important;
+    position: relative;
+}
+.detail_title .tops li{
+    position: absolute;
+    bottom: 0;
+}
+.tops{
+    position: unset !important;
+}
+.details_selectNum{
+    margin-left: 0;
+    padding-left: 20vmin;
+    display: flex;
+}
+.details_tj{
+    padding-left: 18vmin;
+}
+.details_tj li img{
+    border: 2px solid rgba(0,0,0,0);
+}
+.details_tj li.active img{
+    border: 2px solid #fff;
+    transform: scale(1.05);
+}
+.details_tj .titelH4,
+.details_tj .videoList .ulWrap{
+    margin-left: 2vmin;
+}
+.titelH4{
+    margin-top: 4.3vmin;
+}
+.detail_list ul{
+    padding: 2.5vmin 0 3vmin 0;
+}
+.details_tj li{
+    margin-left:0vmin;
+    margin-right: 2vmin;
+}
+.tops li:nth-child(3){
+    background: rgba(0,0,0,0);
+}
+.tops li:nth-child(3) img{
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+    margin-right: 0;
+}
+.videoCon img{
+    margin-right: 4.4vmin;
+}
+.selectNumber .active p{
+    transform: scale(1.05);
+}
+.selectNumber li{
+    width: 10.8vmin;
+    height: 4.2vmin;
+    padding: 0 !important;
+    text-align: center;
+    line-height: 4.2vmin;
+    margin-top: 0 !important;
+}
+.singleH4{
+    margin-top: 1.5vmin;
+}
+
+.mark{
+    background: rgba(255,255,255,.2) !important;
+}

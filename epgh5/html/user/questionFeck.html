@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>问题反馈</title>
+    <meta charset="UTF-8">
+     <link href="../../css/common.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/personal.css">
+     <link rel="stylesheet" href="../../css/animated.css">
+</head>
+
+<body class="black">
+<div class="page-content animated slideInUp">
+
+        <div class="sel_lr">
+            <img src="../../img/logo.png" alt="">
+            <span id="sel_time"></span>
+        </div>
+        <div class="questionFack">
+            <ul class="li">
+                <li class="active">播放卡顿</li>
+                <li>音画不同步</li>
+                <li>闪退崩溃</li>
+                <li>花瓶</li>
+                <li>付费后无法观看</li>
+                <li>界面切换卡顿</li>
+                <li>无法播放</li>
+                <li>无法登录</li>
+            </ul>
+            <div class="info">
+                <p class="dev_info">设备信息</p>
+                <p>版本号: 1.0.28</p>
+                <p>IP地址: 221.181.100.12   MAC地址: 00:db:7e:f4:6d:ds</p>
+                <p>设备ID: sksfasfasasdfasdfasddf</p>
+                <p>版本号: 1.0.28</p>
+                <p>内部存储: adsfasdfasdfasdsfadsdf</p>
+            </div>
+         </div>
+</div>
+</body>
+<script src="../../js/jquery-1.12.4.min.js"></script>
+<script src="../../js/common.js"></script>
+<script type="text/javascript">
+    // 是否登录  true登录 false 未登录
+    var logins = false
+    if (logins){
+        $("#loginName").html('10293490@qq.com')
+    }else {
+        $("#loginName").html('未登录')
+
+    }
+
+    // 键盘事件开始
+    $(function() {
+        var jqThis;
+        var colThis;
+        $(window).keydown(function (e) {
+            $('.li li').each(function () { // 左右的this
+                if ($(this).hasClass('active')) {
+                    jqThis = $(this)
+                }
+            });
+
+            if(e.keyCode==39){ // 右-39
+                if (jqThis.next().length === 0) { // 这是到头啦
+                    jqThis.parents('.li').find('li').eq(0).addClass('active')
+                }
+                jqThis.removeClass('active')
+                jqThis.next().addClass('active')
+            }
+            if(e.keyCode==37){ // 左-37
+                if (jqThis.prev().length === 0) { // 这是到头啦
+                    jqThis.parents('.li').find('li').last().addClass('active')
+                }
+                jqThis.removeClass('active') //
+                jqThis.prev().addClass('active')
+            }
+            if(e.keyCode==13){ // enter
+                var type_index = jqThis.attr("tabindex")
+            }
+            // 返回上一页
+            if (e.keyCode == 8) { // backspace
+                window.history.go(-1)
+            }
+        })
+    })
+
+
+</script>
+</html>

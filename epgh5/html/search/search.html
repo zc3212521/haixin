@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>搜索页面</title>
+    <meta charset="UTF-8">
+     <link href="../../css/common.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/search.css">
+    <link rel="stylesheet" href="../../css/animated.css">
+</head>
+
+<body id="fullScreen">
+    <div class="page-content videoInfo black">
+         <div class="sel_lr">
+            <img src="../../img/logo.png" alt="">
+            <span id="sel_time"></span>
+         </div>
+        <div class="search_content">
+            <section class="s_left">
+                <div class="s_yy">
+                    <p>请按</p>
+                    <img src="../../img/search/yuyin.png" alt="">
+                    <p>说话</p>
+                </div>
+                <div class="s_sc">
+                    <div class="s_s">
+                        <span>
+                            <input type="text" autofocus="autofocus" oninput="inputContent($(this))"  placeholder="请输入首字母搜索">
+                        </span>
+                    </div>
+                    <div class="s_c">
+                        <ul>
+                            <li class="active">A</li>
+                            <li>B</li>
+                            <li>C</li>
+                            <li>D</li>
+                            <li>E</li>
+                            <li>F</li>
+                            <li>G</li>
+                            <li>H</li>
+                            <li>I</li>
+                            <li>J</li>
+                            <li>K</li>
+                            <li>L</li>
+                            <li>M</li>
+                            <li>N</li>
+                            <li>O</li>
+                            <li>P</li>
+                            <li>Q</li>
+                            <li>R</li>
+                            <li>S</li>
+                            <li>T</li>
+                            <li>U</li>
+                            <li>V</li>
+                            <li>W</li>
+                            <li>X</li>
+                            <li>Y</li>
+                            <li>Z</li>
+                            <li>0</li>
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li>5</li>
+                            <li>6</li>
+                            <li>7</li>
+                            <li>8</li>
+                            <li>9</li>
+                        </ul>
+                        <div>
+                            <span>
+                                <img src="../../img/search/dele.png" alt="">
+                            </span>
+                            <span>
+                                <p>]</p>
+                            </span>
+                            <span>
+                                <img src="../../img/search/tuige.png" alt="">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="s_center">
+                <span class="c_c">
+                    <input type="text" placeholder="搜索历史">
+                    <span>
+                        <img src="../../img/search/dele.png" alt="">
+                        <p>清空</p>
+                    </span>
+                </span>
+                <div class="ser_name">
+                    <p>皇上二大爷</p>
+                    <p>花火</p>
+                    <p>好大一个家</p>
+                    <p>海魂</p>
+                    <p>魂断楼兰</p>
+                    <p>欢天喜地对亲家</p>
+                    <p>牦牛岁月</p>
+                    <p>谎言大爆炸</p>
+                    <p>何以笙箫默</p>
+                    <p>好大一箩筐</p>
+                </div>
+            </section>
+            <section class="s_right">
+                <span>
+                    <p>猜你喜欢</p>
+                </span>
+                <div class="tht">
+                    <ul>
+                        <li>
+                            <img src="../../img/search/ds_img.png" alt="">
+                        </li>
+                        <li>
+                            <img src="../../img/search/ds_img2.png" alt="">
+                        </li>
+                        <li>
+                            <img src="../../img/search/ds_img.png" alt="">
+                        </li>
+                        <li>
+                            <img src="../../img/search/ds_img2.png" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section style="display: none;" class="s_right">
+                <span>
+                    <p>猜你喜欢</p>
+                </span>
+                <div>
+                    <ul>
+                        <li>
+                            <img src="../../img/search/ds_img.png" alt="">
+                        </li>
+                        <li>
+                            <img src="../../img/search/ds_img2.png" alt="">
+                        </li>
+                        <li>
+                            <img src="../../img/search/ds_img.png" alt="">
+                        </li>
+                        <li>
+                            <img src="../../img/search/ds_img2.png" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+<script src="../../js/jquery-1.12.4.min.js"></script>
+<script src="../../js/common.js"></script>
+<script type="text/javascript">
+    keyEvent()
+    function inputContent(_this) {
+        console.log(_this.val())
+    }
+</script>
+</html>

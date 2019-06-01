@@ -1,0 +1,240 @@
+
+.bgSel{
+    /*background-size: cover; */
+    /* background-attachment: fixed; */
+    /* width: 100%; */
+    /* height: 100%; */
+    /* position: absolute; */
+    /* background-position: center center; */
+    /* width: 100%; */
+    /* height: 100%; */
+    /* background-size: cover; */
+    /* background-attachment: fixed; */
+    /* position: absolute; */
+    /* background-position: center center; */
+
+     -webkit-transition: all 0.8s;
+     transition: all 0.8s;
+    background: url(../img/selected/1.jpg);
+    width: 100%;
+    height: 100%;
+    /* background: url(../img/play_bg.png); */
+    background-size: cover;
+    background-attachment: fixed;
+    position: absolute;
+    background-position: center center;
+}
+@-webkit-keyframes fadeInOut {
+    0% {
+        opacity:.25;
+    }
+    25% {
+        opacity:.5;
+    }
+    50% {
+        opacity: .75;
+    }
+    75% {
+        opacity:1;
+    }
+}
+.anim_fade_image {
+    /*position:absolute;*/
+    -webkit-animation-name: fadeInOut;
+    /*-webkit-animation-timing-function: ease-in-out;*/
+    /*-webkit-animation-iteration-count: infinite;*/
+    -webkit-animation-duration: 10s;
+    /*-webkit-animation-direction: alternate;*/
+}
+/*向上的箭头*/
+.index_up{
+    width: 100%;
+    height:20px;
+    /*color: #7c7d7f;*/
+    color: #fff;
+    padding: 10px 0 10px 0;
+    margin-top: 10px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 3vmin;
+    line-height: 20px;
+    position: relative;
+    z-index: 1000;
+}
+
+.index_ds,.index_zy{
+    padding:2.5vmin 5vmin;
+}
+.index_zy{
+    padding:0  5vmin 2.5vmin;
+}
+.index_tiao, .index_zyt{
+    display: inline-block;
+    width:8px;
+    height:26px;
+    background:rgba(198,151,25,1);
+    margin-right: 20px;
+    float: left;
+    margin-top: 8px;
+}
+.index_zyt{
+    background:rgba(95,25,198,1);
+}
+.sel_title{
+    font-size:3.2vmin;
+    font-family:PingFangSC-Regular;
+    font-weight:400;
+    color:rgba(255,255,255,1);
+    line-height:10vmin;
+}
+.sel_des{
+    font-size:17vmin;
+    font-weight:400;
+    color:rgba(255,255,255,0.4);
+    line-height: 5.4vmin;
+}
+#carousel2{
+    padding-bottom: 70px;
+}
+.index_tit{
+    position: absolute;
+    width: 100%;
+    bottom: 30px;
+    text-indent: 20px;
+    font-size: 24px;
+    color: #fff;
+}
+.es-carousel-wrapper{
+    top: 32.2%;
+}
+.index_ds{
+    padding: 2.5vmin 50px ;
+    height: auto;
+}
+.sel{
+    /*margin-top:33vmin;*/
+    margin-left: 9.5vmin;
+    padding-left: 0;
+}
+
+.index_zi{
+    font-size:5.4vmin;
+    font-weight:400;
+    color:#fff;
+}
+
+.sel_des{
+    font-size:3vmin;
+    font-weight:400;
+    color:rgba(255,255,255,0.4);
+    line-height: 40px;
+}
+.sel_type{
+    font-size:3vmin;
+    font-weight:400;
+    color:rgba(255,255,255,0.8);
+    line-height: 5.4vmin;
+}
+.index_ds p:nth-child(3){
+    margin-top: 2vmin;
+}
+.tj li img{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+}
+
+.tj li{
+    width: 25.4vmin;
+    height:34vmin ;
+    position: relative;
+}
+
+.tj li.active>img{
+    transform: scale(1.05);
+    border: 2px solid #fff !important;
+}
+.tj li{
+    margin-left: 0;
+    margin-right: 2vmin;
+    position: relative;
+}
+.tj li p{
+    position: absolute;
+    left: 1.3vmin;
+    bottom: 1.6vmin;
+    color: rgba(255,255,255,.8);
+    font-size: 2.4vmin;
+}
+.tj li.active p{
+    font-size: 2.6vmin;
+    color: rgba(255,255,255,1);
+}
+.sel_li li{
+    width: 21.78% !important;
+    /*margin-left: 1.5% !important;*/
+    position: relative;
+    margin-right: 2vmin;
+}
+.sel_li li>span img{
+    position: absolute;
+    right: 0;
+    top: 0;
+    /*width: 4.3vmin;*/
+    /*height: 2.3vmin;*/
+    width: 8.5vmin;
+    height: 4.5vmin;
+    border: none;
+    outline: none;
+}
+.sel_li li.active{
+    background: rgba(0,0,0,0);
+}
+.sel_li li.active>span img{
+    border: none;
+    outline: none;
+}
+.index_left{
+    margin-left: 12vmin;
+}
+.yutobe span img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 10.1vmin !important;
+    height: 3.2vmin !important;
+}
+.ulWrap li{
+    /*width: 41.7vmin !important;*/
+    width: 21.7%;
+    height: 23.6vmin;
+}
+#animate{
+    position: relative;
+    border: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.tj_bottom{
+    position: absolute;
+    width: 100%;
+    bottom: 2.5vmin
+}
+/*index - index列表*/
+.index_list_tit{
+    font-size: 3vmin;
+    color: #fff;
+}
+.index_list_ul{
+    padding: 0 !important;
+}
+.index_list_ul li{
+    width:25.4vmin !important;
+    height: 34vmin !important;
+}
+.index_list .index_ds{
+    padding-top: 2vmin;
+}

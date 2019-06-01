@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>开通vip</title>
+    <meta charset="UTF-8">
+     <link href="../../css/common.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/personal.css">
+     <link rel="stylesheet" href="../../css/animated.css">
+</head>
+
+<body class="black">
+<div class="page-content animated slideInUp">
+    <div class="sel_lr">
+        <img src="../../img/logo.png" alt="">
+        <span id="sel_time"></span>
+    </div>
+    <div class="openVip">
+        <div class="vipLogin">
+            <img id="tx" class="tx" src="../../img/user/noLogin.png" alt="">
+            <span class="loginCen">
+                <p id="loginMask" class="loginMask">未登录</p>
+                <p id="seeLogin" class="seeLogin">登录后查看会员有效期</p>
+            </span>
+            <span id="loginBtn" class="loginBtn">登录</span>
+            <span style="display: none;" id="checkBtn" class="loginBtn">切换账号</span>
+
+        </div>
+        <div class="vipPrice">
+            <div class="intro">
+                <div class="v1 v">
+                    <span class="pric"><i>$</i> 59.99</span>
+                    <span class="pricDes"><p>年卡套餐 <em>购买一次</em></p></span>
+                </div>
+                <div class="v2 v active">
+                    <span class="pric"><i>$</i> 7.99</span>
+                    <span class="pricDes">
+                        <p>经典影视会员包 <em>到期续费$7.99/月</em></p>
+                        <p>套餐可随时取消。按【OK键】立即订阅</p>
+                    </span>
+                </div>
+                <div class="v3 v">
+                    <span class="pric"><i>$</i> 30.00</span>
+                    <span class="pricDes">
+                        <p>连续包月套餐 <em>权益到期前自动续费</em></p>
+                    </span>
+                </div>
+                <div class="v4 v">
+                    <span class="pric"><i>$</i> 36.00</span>
+                    <span class="pricDes">
+                        <p>单次包月套餐 <em>权益到期前自动续费</em></p>
+                    </span>
+                </div>
+            </div>
+            <div class="openEwm">
+                <img src="../../img/user/vipma.png" alt="">
+                <span>
+                    <p class="sm">扫码关注</p>
+                    <p class="jb">Migu TV</p>
+                </span>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../../js/jquery-1.12.4.min.js"></script>
+<script src="../../js/common.js"></script>
+<script type="text/javascript">
+    var logins = true  // 登录
+    if (logins){
+        $("#loginMask").html('欢迎， 10293490@qq.com')
+        $("#seeLogin").html('有效期 2019-4-15 09:17:36')
+        $('#checkBtn').show().addClass('v')
+        $('#loginBtn').hide().removeClass('v')
+        $('#tx').attr('src','../../img/user/alreadyLog.png')
+    }else {
+        $("#loginMask").html('未登录')
+        $("#seeLogin").html('登录后查看会员有效期')
+        $('#checkBtn').hide().removeClass('v')
+        $('#loginBtn').show().addClass('v')
+        $('#tx').attr('src','../../img/user/noLogin.png')
+    }
+    // 键盘事件开始
+    $(function() {
+        var jqThis;
+        var _this;
+         $(window).keydown(function (e) {
+             $('.v').each(function () { // 左右的this
+                if ($(this).hasClass('active')) {
+                    jqThis = $(this)
+                }
+             });
+            if(e.keyCode==40){ // 下 滑到下一页
+
+                if (jqThis.parents().hasClass('intro')) { // 会员的展示
+                    if (jqThis.next().length === 0) { // 这是到头啦
+                        jqThis.parents('.vipPrice').prev().children('.v').addClass('active')
+                    }
+                }else {
+                    if (jqThis.hasClass('loginBtn')){ // 在登录上
+                        jqThis.parents('.vipLogin').next().children().find('.v').eq(0).addClass('active')
+                    }
+                }
+                jqThis.removeClass('active')
+                jqThis.next().addClass('active')
+            }
+            if (e.keyCode==38){ // 上
+                if (jqThis.parents().hasClass('intro')) { // 会员的展示
+                    if (jqThis.prev().length === 0) { // 这是到头啦
+                         jqThis.parents('.vipPrice').prev().children('.v').addClass('active')
+                     }
+                }else {
+                    if (jqThis.hasClass('loginBtn')){ // 在登录上
+                         jqThis.parents('.vipLogin').next().children().find('.v').last().addClass('active')
+                    }
+                }
+                jqThis.removeClass('active')
+                jqThis.prev().addClass('active')
+            }
+            if(e.keyCode==13){ // enter
+                var type_index = jqThis.attr("tabindex")
+                switch (type_index) {
+                }
+            }
+            // 返回上一页
+            if (e.keyCode == 8) { // backspace
+                window.history.go(-1)
+            }
+        })
+    })
+</script>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>系统设置</title>
+    <meta charset="UTF-8">
+     <link href="../../css/common.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/personal.css">
+     <link rel="stylesheet" href="../../css/animated.css">
+</head>
+
+<body class="black">
+<div class="page-content animated slideInUp">
+    <div class="sel_lr">
+        <img src="../../img/logo.png" alt="">
+        <span id="sel_time"></span>
+    </div>
+    <div class="setting">
+        <ul>
+            <li class="active">
+                <p>默认视频清晰度</p>
+                <div>
+                    <p>高清 ></p>
+                </div>
+            </li>
+            <li class="empty">
+                <p>历史浏览记录</p>
+                <div>
+                    <p>清空</p>
+                </div>
+            </li>
+            <li class="empty">
+                <p>收藏记录</p>
+                <div>
+                    <p>清空</p>
+                </div>
+            </li>
+            <li class="kg">
+                <p>儿童应用场景开关</p>
+                <div class="right rightg">
+                    <div isopen="false" class="btnn btnng">关</div>
+                </div>
+            </li>
+            <li class="kg">
+                <p>自动播放连续剧集</p>
+                <div class="right rightk">
+                    <div isopen="true" class="btnn btnnk">开</div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+<script src="../../js/jquery-1.12.4.min.js"></script>
+<script src="../../js/common.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $('.btnn').each(function () {
+            if ($(this).attr('isopen') == 'false') {
+                $(this).animate({left:'9.8vmin'});
+            } else {
+                $(this).animate({left:'0'});
+            }
+        })
+     });
+    // 键盘事件开始
+    $(function() {
+        var jqThis;
+        var _this;
+         $(window).keydown(function (e) {
+             $('.setting li').each(function () { // 左右的this
+                if ($(this).hasClass('active')) {
+                    jqThis = $(this)
+                 }
+            });
+            if(e.keyCode==40){ // 下 滑到下一页
+                if (jqThis.next().length === 0) { // 这是到头啦
+                    jqThis.parents('.setting').find('.li').eq(0).addClass('active')
+                }
+                jqThis.removeClass('active')
+                jqThis.next().addClass('active')
+            }
+            if (e.keyCode==38){ // 上
+                if (jqThis.prev().length === 0) { // 这是到头啦
+                    jqThis.parents('.setting').find('.li').last().addClass('active')
+                }
+                jqThis.removeClass('active') //
+                jqThis.prev().addClass('active')
+            }
+            if(e.keyCode==39){ // 右-39
+                console.log(jqThis.children().find('.btnn'))
+                _this = jqThis.children().find('.btnn')
+                if (jqThis.children(".right").length != 0){ // 右 = 关
+                    _this.attr('isopen','false').animate({left:'9.8vmin'});
+                    _this.attr('class','btnn btnng');
+                    _this.parent().attr('class','right rightg');
+                    _this.children(".btnn").html('关')
+                }
+             }
+            if(e.keyCode==37){ // 左-37
+                if (jqThis.children(".right").length != 0){ // 右 = 关
+                    _this = jqThis.children().find('.btnn')
+                    _this.attr('isopen','true').animate({left:'0px'});
+                    _this.attr('class','btnn btnnk');
+                    _this.parent().attr('class','right rightk');
+                    _this.children(".btnn").html('开')
+                }
+            }
+            if(e.keyCode==13){ // enter
+                var type_index = jqThis.attr("tabindex")
+                switch (type_index) {
+                }
+            }
+            // 返回上一页
+            if (e.keyCode == 8) { // backspace
+                window.history.go(-1)
+            }
+        })
+
+        // 返回当前集数的 index
+        function mod() {
+            var index = 0
+            $(".setNumber .li").each(function (item,i) {
+                if ($(this).css('display') == 'inline-block') {
+                    index = $(this).index()
+                }
+            })
+            return index
+        }
+    })
+
+
+</script>
+</html>

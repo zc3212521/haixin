@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>个人中心-登录 注册</title>
+    <meta charset="UTF-8">
+     <link href="../../css/common.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/personal.css">
+     <link rel="stylesheet" href="../../css/animated.css">
+</head>
+
+<body class="black">
+<div class="page-content">
+        <div class="sel_lr">
+            <img src="../../img/logo.png" alt="">
+            <span id="sel_time"></span>
+        </div>
+        <div class="login_sign">
+            <span class="log_aty">
+                <p class="ls_tit">Login</p>
+                <p class="ls_des">登录你的账户</p>
+            </span>
+            |
+            <span>
+                <p class="ls_tit">Signup</p>
+                <p class="ls_des">注册新的账户</p>
+            </span>
+        </div>
+        <div class="personal updpass loginSign login">
+            <span class="active">
+                <input id="y_pas" autofocus="autofocus" type="text" placeholder="邮箱">
+            </span>
+            <span>
+                <input id="y_newPas" type="password" placeholder="密码">
+            </span>
+            <p class="updOk">
+                LOGIN
+            </p>
+            <p class="forget">
+                忘记密码
+            </p>
+        </div>
+        <div class="personal updpass resetPass loginSign sign"  style="display: none;">
+            <span class="active email">
+                <input id="y_emil" autofocus="autofocus" type="text" placeholder="注册邮箱">
+            </span>
+        <span class="gety"><em id="y_text">获取验证码</em></span>
+        <span class="">
+                <input id="y_yan" autofocus="autofocus" type="text" placeholder="验证码">
+            </span>
+        <span>
+                <input id="s_newPas" type="password" placeholder="密码(6-16位数字，字母或符号)">
+            </span>
+        <p class="updOk">
+            SIGN　UP
+        </p>
+    </div>
+</div>
+</body>
+<script src="../../js/jquery-1.12.4.min.js"></script>
+<script src="../../js/common.js"></script>
+<script type="text/javascript">
+
+  passWords()
+
+</script>
+</html>

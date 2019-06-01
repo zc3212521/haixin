@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>HTML5自定义Checkbox和Radiobox演示地址</title>
+
+    <style>
+        input{
+            display:none;
+        }
+        label {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border: 1px solid #333;
+            position: relative;
+            border-radius: 50%;
+            box-shadow: 0 0 1px #ccc;
+            background: radial-gradient(circle, white, #48494B);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed', GradientType=0);
+            border: 1px solid #ccc;
+        }
+        label::after {
+            -webkit-transition: opacity .5s ease;
+            -moz-transition: opacity .5s ease;
+            -o-transition: opacity .5s ease;
+            -ms-transition: opacity .5s ease;
+            transition: opacity .5s ease;
+            cursor: pointer;
+            position: absolute;
+            content: '';
+            opacity: 0;
+        }
+
+        input:checked+label::after{
+            border: 2px solid #f5a623;
+            border-top: none;
+            border-right: none;
+            -webkit-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            width:20px;
+            height:10px;
+            top:50%;
+            margin-top:-8px;
+            left:50%;
+            margin-left:-10px;
+            opacity: 1.0;
+        }
+    </style>
+
+</head>
+
+<body>
+<input type="checkbox" id="checkbox">
+<label for="checkbox"></label>
+ </body>
+<script src="../js/jquery-1.12.4.min.js"></script>
+<script>
+    $('.checkbox').click(function(){
+        if($(this).hasClass("checked")){
+            $(this).removeClass("checked");
+        }else{
+            $(this).addClass("checked");
+        }
+    });
+</script>
+</html>
