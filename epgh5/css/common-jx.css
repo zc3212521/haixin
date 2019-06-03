@@ -470,7 +470,7 @@ not supported by any browser */}
     height:2.7vmin;
     margin-left: 9.5vmin;
 }
-#sel_time{
+.sel_time{
     margin-right: 9.5vmin;
     color:rgba(255,254,253,0.8);
     font-size: 3vmin;

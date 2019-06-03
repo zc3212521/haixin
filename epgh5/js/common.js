@@ -13,7 +13,7 @@ function completeLoading() {
 }
 /*每1000毫秒(1秒)执行一次shijian()方法*/
 
-setInterval("shijian()", 1)
+setInterval("shijian()", 1000)
 function shijian() {
     var today = new Date();
     var hh = today.getHours();
@@ -37,9 +37,9 @@ function shijian() {
     var ver = isBroswer().version
     if (hh > 12) {
         var num = hh - 12;
-        document.getElementById("sel_time").innerHTML =num + "&nbsp;" + ":" + "&nbsp;" + (mm <10 ? '0' + mm : mm) + "&nbsp;" + apm+" <span class='version'>"+na+"-"+ver+"-v1.0</span><br/>"
+        document.getElementsByClassName("sel_time")[0].innerHTML =num + "&nbsp;" + ":" + "&nbsp;" + (mm <10 ? '0' + mm : mm) + "&nbsp;" + apm+" <span class='version'>"+na+"-"+ver+"-v1.0</span><br/>"
     } else {
-        document.getElementById("sel_time").innerHTML =hh + "&nbsp;" + ":" + "&nbsp;" + (mm <10 ? '0' + mm : mm) + "&nbsp;" + abm + "<span class='version'>"+na+"-"+ver+"-v1.0</span><br/>";
+        document.getElementsByClassName("sel_time")[0].innerHTML =hh + "&nbsp;" + ":" + "&nbsp;" + (mm <10 ? '0' + mm : mm) + "&nbsp;" + abm + "<span class='version'>"+na+"-"+ver+"-v1.0</span><br/>";
     }
 }
 
