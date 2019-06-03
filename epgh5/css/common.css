@@ -167,7 +167,8 @@ li:focus{
 
 .videoCon h3{
   color: #a0a5b4;
-  font-size: 3.5vmin;
+  font-size: 2.5vw;
+  font-weight: 300;
   line-height: 6vmin;
 }
 
