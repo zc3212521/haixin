@@ -6,7 +6,7 @@
     height: 100%;
     position: absolute;
     background-position: center center;
-    background:url("../img/selected/1.jpg");
+    /*background:url("../img/selected/1.jpg");*/
     /*-webkit-filter: blur(1rem);*/
     /*filter: blur(1rem);*/
     -webkit-transition: all .8s;
