@@ -124,23 +124,34 @@
 }
 
 .zySetNum li{
-    width: 25vmin;
+    width: 100%;
     /*height: 9.7vmin;*/
     font-size: 1.6vmin;
     line-height: 2.7vmin;
     padding: 2vmin 1vmin !important;
-    height: 7.7vmin !important;
+    height: 6.094vw !important;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
 }
 .zySetNum li>span{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    /*margin-top: 50%;*/
     color: #ccc;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
+    display: inline-block;
+    /*height: 3.4375vw;*/
+    line-height: 1.1458vw;
+    /*-webkit-box-orient: vertical;*/
     -webkit-line-clamp: 3;
     line-clamp: 3;
     overflow: hidden;
     white-space: pre-wrap;
     text-overflow: ellipsis;
      /*margin: 2vmin 1vmin;*/
+    left: 1vmin;
+    right: 1vmin;
 }
 .zySetNum li.active{
     background: rgba(255,255,255,.2) !important;

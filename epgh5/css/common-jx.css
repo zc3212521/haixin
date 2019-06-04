@@ -472,8 +472,8 @@ not supported by any browser */}
 }
 .sel_time{
     margin-right: 9.5vmin;
-    color:rgba(255,254,253,0.8);
-    font-size: 3vmin;
+    color:rgba(255,254,253,0.6);
+    font-size: 2vmin;
     line-height: 30px;
 }
 .vipImg{
