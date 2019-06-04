@@ -548,6 +548,9 @@
       $('.ciping-content .videoList').first().addClass('img_aty')
       $('.ciping-content .videoList').first().find('.li').eq(0).addClass('active')
       $(".ciping-content").css('transform', 'translateY(0)');
+      $('.ciping-content ul.tj').eq(0).animate({
+          left: '0px'
+      })
       var jqThis;
       var colThis;
       var startAnimate = false
@@ -596,6 +599,9 @@
                   $('.ciping-content .videoList').first().addClass('img_aty')
                   $('.ciping-content .videoList').first().find('.li').eq(0).addClass('active')
                   $(".ciping-content").css('transform', 'translateY(0)');
+                  $('.ciping-content ul.tj').eq(0).animate({
+                      left: '0px'
+                  })
               }
               if(colThis.next().hasClass('center') || colThis.next().hasClass('yx')){
                   // tops2()
