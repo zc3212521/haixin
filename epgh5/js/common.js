@@ -45,7 +45,7 @@ function shijian() {
 
 // 剧集
 function number(str) {
-    console.log(str)
+    // console.log(str)
     if(str == '1-12'){
         $(".vipImg").css("display","none")
     }else {
@@ -184,13 +184,13 @@ function bottom() {
 function tops() {
     $("#pageContent").stop().animate({
         scrollTop: 0
-    },800);
+    }, 800);
 }
 function tops2() {
-    console.log(document.getElementById('top1').offsetHeight)
-    console.log($('#top1').height())
+    // console.log(document.getElementById('top1').offsetHeight)
+    // console.log($('#top1').height())
     var topHei = document.getElementById('top1').offsetHeight
-    var btom = document.getElementById('sel_lr').offsetHeight
+    var btom = document.getElementsByClassName('sel_lr')[0].offsetHeight
     var t = topHei - btom
     $("#pageContent").stop().animate({
         scrollTop: t
@@ -272,7 +272,7 @@ function passWords(){
         }
         if(e.keyCode==38){ // 上
             if (colThis.prev().length === 0 && colThis.parents(".updpass").css("display")=='block') {
-                console.log(colThis.parents(".updpass").css("display"))
+                // console.log(colThis.parents(".updpass").css("display"))
                 colThis.parents(".updpass").children().last().addClass('active')
                 colThis.parents(".updpass").children().last().children('input').focus()
             }
@@ -295,7 +295,7 @@ function passWords(){
             if (colThis.hasClass('updOk')){
                 //修改密码
                 var newPas = $("#y_newPas").val()
-                console.log(newPas)
+                // console.log(newPas)
                 if (newPas.length<=16 && newPas.length>=6) {
                     toust('修改成功')
                     setTimeout(toustRemove,2000)

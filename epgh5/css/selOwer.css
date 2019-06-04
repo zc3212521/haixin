@@ -14,17 +14,14 @@
 }
 /*向上的箭头*/
 .index_up{
-    width: 100%;
-    height:20px;
-    color: #7c7d7f;
-    padding: 10px 0 10px 0;
-    margin-top: 10px;
+    width: 100vw;
+    /*color: #7c7d7f;*/
+    color: #fff;
     text-align: center;
-    cursor: pointer;
-    font-size: 3vmin;
-    line-height: 20px;
-    position: relative;
-    z-index: 10000
+    line-height: 4.479vw;
+    height: 4.479vw;
+    position: relative
+
 }
 
 .index_ds,.index_zy{
@@ -33,14 +30,14 @@
 .index_zy{
     padding:0  5vmin 2vmin;
 }
-.index_tiao, .index_zyt,.index_yx{
+.index_tiao, .index_zyt, .index_yx{
     display: inline-block;
-    width:8px;
-    height:26px;
+    width: 0.417vw;
+    height: 1.354vw;
+    margin-right: 0.469vw;
     background:rgba(198,151,25,1);
-    margin-right: 20px;
     float: left;
-    margin-top: 8px;
+    margin-top: 0.8vw;
 }
 .index_zyt{
     background:rgba(95,25,198,1);
@@ -89,7 +86,7 @@
 }
 
 .index_zi{
-    font-size:28px;
+    font-size: 1.562vw;
     font-weight:400;
     color:#fff;
 }
@@ -166,9 +163,7 @@
     border: none;
     outline: none;
 }
-.index_left{
-    margin-left: 12vmin;
-}
+
 .yutobe span img{
     position: absolute;
     left: 0;
@@ -214,6 +209,7 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     width: 80%;
+    font-size: 1.354vw;
 }
 .anim_fade_image{
     width: 100%;
@@ -227,11 +223,11 @@
     position: fixed;
 }
 .yx ul .li_yx{
-    width:31.5% !important;
-    height: 34vmin;
+    width:31.458vw;
+    height: 17.708vw;
 }
 .yx ul .li_yxFirst{
-    height: 34vmin;
+    height: 17.708vw;
 }
 /*图片找到合适的会去掉*/
 .li_yx img{

@@ -48,34 +48,24 @@
 }
 /*向上的箭头*/
 .index_up{
-    width: 100%;
-    height:20px;
+    padding-top: 2.8125vw;
+    width: 100vw;
     /*color: #7c7d7f;*/
     color: #fff;
-    padding: 10px 0 10px 0;
-    margin-top: 10px;
     text-align: center;
-    cursor: pointer;
-    font-size: 3vmin;
-    line-height: 20px;
+    line-height: 4.479vw;
+    height: 4.479vw;
     position: relative;
-    z-index: 1000;
 }
 
-.index_ds,.index_zy{
-    padding:2.5vmin 5vmin;
-}
-.index_zy{
-    padding:0  5vmin 2.5vmin;
-}
 .index_tiao, .index_zyt{
     display: inline-block;
-    width:8px;
-    height:26px;
+    width: 0.417vw;
+    height: 1.354vw;
+    margin-right: 0.469vw;
     background:rgba(198,151,25,1);
-    margin-right: 20px;
     float: left;
-    margin-top: 8px;
+    margin-top: 0.8vw;
 }
 .index_zyt{
     background:rgba(95,25,198,1);
@@ -107,8 +97,8 @@
 .es-carousel-wrapper{
     top: 32.2%;
 }
-.index_ds{
-    padding: 2.5vmin 50px ;
+.index_ds, .index_zy{
+    padding: 0 4.062vw 1.1979vw;
     height: auto;
 }
 .sel{
@@ -118,7 +108,7 @@
 }
 
 .index_zi{
-    font-size:5.4vmin;
+    font-size: 1.562vw;
     font-weight:400;
     color:#fff;
 }
@@ -157,15 +147,15 @@
 }
 .tj li{
     margin-left: 0;
-    margin-right: 2vmin;
+    margin-right: 0.989vw;
     position: relative;
 }
+.yx .tj li {
+    margin-right: 1.989vw;
+}
+
 .tj li p{
-    position: absolute;
-    left: 1.3vmin;
-    bottom: 1.6vmin;
     color: rgba(255,255,255,.8);
-    font-size: 2.4vmin;
 }
 .tj li.active p{
     font-size: 2.6vmin;
@@ -195,9 +185,7 @@
     border: none;
     outline: none;
 }
-.index_left{
-    margin-left: 12vmin;
-}
+
 .yutobe span img{
     position: absolute;
     left: 0;
@@ -207,8 +195,12 @@
 }
 .ulWrap li{
     /*width: 41.7vmin !important;*/
-    width: 21.7%;
-    height: 23.6vmin;
+    width: 14.167vw;
+    height: 18.958vw;
+    overflow: hidden;
+}
+.ulWrap li.active {
+    overflow: visible;
 }
 .fullpage{
     border: 0;

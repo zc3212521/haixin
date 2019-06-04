@@ -86,23 +86,18 @@
 }
 
 .videoList{
-  position: absolute;
-  bottom: 4%;
+  padding:1vw;
   overflow:hidden;
-  width:100%;
-  padding-top: 10%;
+  width:100vw;
 }
 
 .videoList .ulWrap{
   white-space:nowrap;
-  /*margin: 0 1.5%;*/
-  margin: 0 9.5vmin;
 }
 
 .videoList ul{
-  position: relative;
-  width: 100%;
-  padding: 3.5vmin 0 3vmin 0;
+  padding: 0.9895vw 0 0.781vw;
+  font-size: 0;
 }
 
 .videoList li{
@@ -111,6 +106,7 @@
   width: 25.5vmin;
   /*margin-left: 1.5%;*/
   margin-left: 1.8vmin;
+  vertical-align: bottom;
 }
 
 .videoList li:last-child{
@@ -122,11 +118,18 @@
 }
 
 .videoList p{
-  line-height: 6vmin;
+  line-height: 1.823vw;
   color: #98a4d1;
-  font-size: 2.2vmin;
+  font-size: 1.25vw;
   padding: 0 0.5rem;
+  height: 3.646vw;
+  position: absolute;
+  bottom: 0;
+  display: inline-block;
+  width: 11.77vw;
+  box-sizing:border-box;
 }
+
 
 /* li 获取焦点的时候 出现的样式*/
 li:focus{

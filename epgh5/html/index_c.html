@@ -23,7 +23,7 @@
         <div class="col tuijian index_c">
             <div id="top1" class="videoList top1 cols img_aty" style="position: relative; padding: 6.5vmin 0 3vmin;">
                 <div class="index_ds">
-                    <span class="index_tiao index_left"></span><span class="index_zi ">电视剧</span>
+                    <span class="index_tiao"></span><span class="index_zi ">电视剧</span>
                 </div>
                 <!-- 剧集推荐 把默认放在了这里-->
                 <div class="ulWrap">
@@ -97,7 +97,7 @@
             <div class="videoList cols center "
                  style="position: relative;bottom: 0vmin; padding: 0vmin 0 2vmin;  padding-bottom: 18vmin">
                 <div class="index_zy">
-                    <span class="index_zyt index_left"></span><span class="index_zi ">综艺</span>
+                    <span class="index_zyt"></span><span class="index_zi ">综艺</span>
                 </div>
                 <!-- 剧集推荐 把默认放在了这里-->
                 <div class="ulWrap">
@@ -234,7 +234,7 @@ $(function() {
     var totalWhidth = document.documentElement.scrollWidth;
     var screenWidth = document.body.offsetWidth;
     $(window).keydown(function (e) {
-        console.log(e.keyCode)
+        // console.log(e.keyCode)
         $('.li').each(function () { // 左右的this
             if ($(this).hasClass('active')) {
                 jqThis = $(this)
@@ -248,7 +248,7 @@ $(function() {
         });
         // console.log(e.keyCode)
         if(e.keyCode==38){ // 上
-            console.log(colThis.index())
+            // console.log(colThis.index())
             if (colThis.index() === 0) {
                 $('.yx').hide()
                 $("body").addClass("animated slideOutDown")
@@ -275,7 +275,7 @@ $(function() {
         }
         if(e.keyCode==40){ // 下
             console.log(colThis.next().hasClass('center'))
-            if (colThis.next().length === 0) { // 这是到头啦
+            // if (colThis.next().length === 0) { // 这是到头啦
                 $('.videoList').first().addClass('img_aty')
                 $('.videoList').first().find('.li').eq(0).addClass('active')
                 tops()

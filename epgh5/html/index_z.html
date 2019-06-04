@@ -3,8 +3,10 @@
 <head>
   <title>精选页面</title>
   <meta charset="UTF-8">
+  <link href="../css/global.css" type="text/css" rel="stylesheet">
   <link href="../css/common.css" type="text/css" rel="stylesheet">
   <link rel="stylesheet" href="../css/details.css">
+  <link rel="stylesheet" href="../css/selOwer.css">
   <link rel="stylesheet" href="../css/selOwerIndex.css">
   <link rel="stylesheet" href="../css/animated.css">
   <style>
@@ -30,20 +32,34 @@
     .toPage2 {
       transform: translateY(-100vh);
     }
+    .toPage1 {
+      transform: translateY(0);
+    }
+    /*次屏样式*/
+    .ciping-inner {
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+    .ciping .ciping-content {
+      transition: all 500ms;
+      padding: 0 4.687vw;
+    }
   </style>
 </head>
 <body class="" style="background: #000;">
 <div class="page-content bgSel current">
+  <div class="sel_lr sel_opacity">
+    <img src="../img/logo.png" alt="">
+    <span class="sel_time"></span>
+  </div>
   <div class="bg-jingxuan"></div>
   <div class="translate-wrap">
     <div id="animate" class="animated  fadeInDown jingxuan fullpage" >
       <div class="index_up">
         <img src="../img/up.png" alt="">
       </div>
-      <div class="sel_lr sel_opacity">
-        <img src="../img/logo.png" alt="">
-        <span class="sel_time"></span>
-      </div>
+
       <div class="col tuijian tj_bottom">
         <div class="index_ds sel">
           <p class="index_zi sel_title">都挺好(2019)</p>
@@ -51,7 +67,7 @@
           <p class="sel_type">类型: <span>剧集 / 家庭</span></p>
           <p class="sel_type actor">姚晨 / 倪大红 / 郭京飞 / 杨祐宁 / 李念 等</p>
         </div>
-        <div class="videoList" style="position: relative;bottom: 0; padding:0;">
+        <div class="videoList" style="position: relative;bottom: 0; padding:0;    margin-left: 9.5vmin;padding-left: 1vmin;">
           <!-- 剧集推荐 把默认放在了这里-->
           <div class="ulWrap">
             <ul class="tj sel_li aty">
@@ -95,204 +111,201 @@
         </div>
       </div>
     </div>
-    <div id="pageContent" class="page-content videoInfo black">
-      <div class="sel_lr" id="sel_lr">
-        <img src="../img/logo.png" alt="">
-        <span class="sel_time"></span>
-      </div>
+    <div class="page-content videoInfo ciping black">
       <div class="index_up cols index_cup">
         <img src="../img/up.png" alt="">
       </div>
       <div class="animated slideInUp">
-        <div class="col tuijian index_c">
-          <div id="top1" class="videoList top1 cols img_aty" style="position: relative; padding: 6.5vmin 0 3vmin;">
-            <div class="index_ds">
-              <span class="index_tiao index_left"></span><span class="index_zi ">电视剧</span>
+        <div class="ciping-inner">
+          <div class="col tuijian ciping-content index_c">
+            <div id="top1" class="videoList top1 cols img_aty" style="position: relative;">
+              <div class="index_ds">
+                <span class="index_tiao index_left"></span><span class="index_zi ">电视剧</span>
+              </div>
+              <!-- 剧集推荐 把默认放在了这里-->
+              <div class="ulWrap">
+                <ul class="tj img_aty index_ul">
+                  <li tabindex="4" class="li active" data-type="0">
+                    <img src="../img/indexImg/ds1.png" alt="image01" />
+                  </li>
+                  <li tabindex="5" class="li"  data-type="0">
+                    <img src="../img/indexImg/ds2.png" alt="image02" />
+                    <span class="index_mask"></span>
+                    <p class="name_tit">密室</p>
+                    <p class="small_title">我正思考着，下意识地翻动着小密识地翻动着小密意识地翻动码箱，我...</p>
+                  </li>
+                  <li tabindex="6" class="li"  data-type="0">
+                    <img src="../img/indexImg/ds3.png" alt="image03" />
+                    <span class="index_mask"></span>
+                    <p class="name_tit">花火</p>
+                    <p class="small_title">我正思考着，下意识地翻动着小密识地翻动着小密意识地翻动码箱，我...</p>
+                  </li>
+                  <li tabindex="7" class="li"  data-type="0">
+                    <img src="../img/indexImg/ds4.png" alt="image04" />
+                    <span class="index_mask"></span>
+                    <p class="name_tit">雨无声处</p>
+                    <p class="small_title">我正思考着，下意识地翻动着小密识地翻动着小密意识地翻动码箱，我...</p>
+
+                  </li>
+                  <li tabindex="8" class="li"  data-type="0">
+                    <img src="../img/indexImg/ds5.png" alt="image05" />
+                    <span class="index_mask"></span>
+                    <p class="name_tit">环太平洋</p>
+                    <p class="small_title">我正思考着，下意识地翻动着小密识地翻动着小密意识地翻动码箱，我...</p>
+
+                  </li>
+                  <li tabindex="9" class="li"  data-type="0">
+                    <img src="../img/indexImg/ds3.png" alt="image06" />
+                    <span class="index_mask"></span>
+                    <p class="name_tit">环太平洋</p>
+                    <p class="small_title">我正思考着，下意识地翻动着小密识地翻动着小密意识地翻动码箱，我...</p>
+
+                  </li>
+                  <li tabindex="4" class="li"  data-type="0">
+                    <img src="../img/indexImg/ds1.png" alt="image01" />
+                    <span class="index_mask"></span>
+                    <p class="name_tit">环太平洋</p>
+                    <p class="small_title">我正思考着，下意识地翻动着小密识地翻动着小密意识地翻动码箱，我...</p>
+
+                  </li>
+                  <li tabindex="5" class="li"  data-type="0">
+                    <img src="../img/indexImg/ds2.png" alt="image02" />
+                    <span class="index_mask"></span>
+                    <p class="name_tit">环太平洋</p>
+                    <p class="small_title">我正思考着，下意识地翻动着小密识地翻动着小密意识地翻动码箱，我...</p>
+
+                  </li>
+                  <li tabindex="6" class="li"  data-type="0">
+                    <img src="../img/indexImg/ds3.png" alt="image03" />
+                    <span class="index_mask"></span>
+                    <p>环太平洋</p>
+                    <p class="small_title">我正思考着，下意识地翻动着小密识地翻动着小密意识地翻动码箱，我...</p>
+
+                  </li>
+                  <li tabindex="7" class="li"  data-type="0">
+                    <img src="../img/indexImg/ds4.png" alt="image04" />
+                    <span class="index_mask"></span>
+                    <p class="name_tit">环太平洋</p>
+                    <p class="small_title">我正思考着，下意识地翻动着小密识地翻动着小密意识地翻动码箱，我...</p>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <!-- 剧集推荐 把默认放在了这里-->
-            <div class="ulWrap">
-              <ul class="tj img_aty index_ul">
-                <li tabindex="4" class="li active" data-type="0">
-                  <img src="../img/indexImg/ds1.png" alt="image01" />
-                </li>
-                <li tabindex="5" class="li"  data-type="0">
-                  <img src="../img/indexImg/ds2.png" alt="image02" />
-                  <span class="index_mask"></span>
-                  <p class="name_tit">密室</p>
-                  <p class="small_title">我正思考着，下意识地翻动着小密识地翻动着小密意识地翻动码箱，我...</p>
-                </li>
-                <li tabindex="6" class="li"  data-type="0">
-                  <img src="../img/indexImg/ds3.png" alt="image03" />
-                  <span class="index_mask"></span>
-                  <p class="name_tit">花火</p>
-                  <p class="small_title">我正思考着，下意识地翻动着小密识地翻动着小密意识地翻动码箱，我...</p>
-                </li>
-                <li tabindex="7" class="li"  data-type="0">
-                  <img src="../img/indexImg/ds4.png" alt="image04" />
-                  <span class="index_mask"></span>
-                  <p class="name_tit">雨无声处</p>
-                  <p class="small_title">我正思考着，下意识地翻动着小密识地翻动着小密意识地翻动码箱，我...</p>
+            <div class="videoList cols center ">
+              <div class="index_zy">
+                <span class="index_zyt index_left"></span><span class="index_zi ">综艺</span>
+              </div>
+              <!-- 剧集推荐 把默认放在了这里-->
+              <div class="ulWrap">
+                <ul class="tj index_ul">
+                  <li tabindex="4" class="li" data-type="1">
+                    <img src="../img/indexImg/zy1.png" alt="image02" />
+                  </li>
+                  <li tabindex="5" class="li" data-type="1">
+                    <img src="../img/indexImg/zy2.png" alt="image03" />
+                    <!--<p>密室</p>-->
+                    <!--<p class="small_title">我正思考着，下意识地翻动着小密识地翻动着小密意识地翻动码箱，我...</p>-->
 
-                </li>
-                <li tabindex="8" class="li"  data-type="0">
-                  <img src="../img/indexImg/ds5.png" alt="image05" />
-                  <span class="index_mask"></span>
-                  <p class="name_tit">环太平洋</p>
-                  <p class="small_title">我正思考着，下意识地翻动着小密识地翻动着小密意识地翻动码箱，我...</p>
+                  </li>
+                  <li tabindex="6" class="li" data-type="1">
+                    <img src="../img/indexImg/zy3.png" alt="image04" />
+                    <!--<p>花火</p>-->
+                    <!--<p class="small_title">我正思考着，下意识地翻动着小密识地翻动着小密意识地翻动码箱，我...</p>-->
 
-                </li>
-                <li tabindex="9" class="li"  data-type="0">
-                  <img src="../img/indexImg/ds3.png" alt="image06" />
-                  <span class="index_mask"></span>
-                  <p class="name_tit">环太平洋</p>
-                  <p class="small_title">我正思考着，下意识地翻动着小密识地翻动着小密意识地翻动码箱，我...</p>
+                  </li>
+                  <li tabindex="7" class="li" data-type="1">
+                    <img src="../img/indexImg/zy2.png" alt="image05" />
+                    <!--<p>雨无声处</p>-->
+                    <!--<p class="small_title">我正思考着，下意识地翻动着小密识地翻动着小密意识地翻动码箱，我...</p>-->
 
-                </li>
-                <li tabindex="4" class="li"  data-type="0">
-                  <img src="../img/indexImg/ds1.png" alt="image01" />
-                  <span class="index_mask"></span>
-                  <p class="name_tit">环太平洋</p>
-                  <p class="small_title">我正思考着，下意识地翻动着小密识地翻动着小密意识地翻动码箱，我...</p>
+                  </li>
+                  <li tabindex="8" class="li" data-type="1">
+                    <img src="../img/indexImg/zy3.png" alt="image01" />
+                    <!--<p>环太平洋 雷霆再起</p>-->
+                    <!--
+                                                <p class="small_title">我正思考着，下意识地翻动着小密识地翻动着小密意识地翻动码箱，我...</p>
+                    -->
 
-                </li>
-                <li tabindex="5" class="li"  data-type="0">
-                  <img src="../img/indexImg/ds2.png" alt="image02" />
-                  <span class="index_mask"></span>
-                  <p class="name_tit">环太平洋</p>
-                  <p class="small_title">我正思考着，下意识地翻动着小密识地翻动着小密意识地翻动码箱，我...</p>
+                  </li>
+                  <li tabindex="9" class="li" data-type="1">
+                    <img src="../img/indexImg/zy4.png" alt="image02" />
+                    <!--<p>环太平洋 雷霆再起</p>-->
+                    <!--<p class="small_title">我正思考着，下意识地翻动着小密识地翻动着小密意识地翻动码箱，我...</p>-->
 
-                </li>
-                <li tabindex="6" class="li"  data-type="0">
-                  <img src="../img/indexImg/ds3.png" alt="image03" />
-                  <span class="index_mask"></span>
-                  <p>环太平洋</p>
-                  <p class="small_title">我正思考着，下意识地翻动着小密识地翻动着小密意识地翻动码箱，我...</p>
+                  </li>
+                  <li tabindex="4" class="li" data-type="1">
+                    <img src="../img/indexImg/zy5.png" alt="image03" />
+                    <!--<p>环太平洋 雷霆再起</p>-->
+                    <!--<p class="small_title">我正思考着，下意识地翻动着小密识地翻动着小密意识地翻动码箱，我...</p>-->
 
-                </li>
-                <li tabindex="7" class="li"  data-type="0">
-                  <img src="../img/indexImg/ds4.png" alt="image04" />
-                  <span class="index_mask"></span>
-                  <p class="name_tit">环太平洋</p>
-                  <p class="small_title">我正思考着，下意识地翻动着小密识地翻动着小密意识地翻动码箱，我...</p>
-                </li>
-              </ul>
+                  </li>
+                  <li tabindex="5" class="li" data-type="1">
+                    <img src="../img/indexImg/zy1.png" alt="image09" />
+                    <!--<p>环太平洋 雷霆再起</p>-->
+                    <!--<p class="small_title">我正思考着，下意识地翻动着小密识地翻动着小密意识地翻动码箱，我...</p>-->
+
+                  </li>
+                  <li tabindex="6" class="li" data-type="1">
+                    <img src="../img/indexImg/zy2.png" alt="image10" />
+                    <!--<p>环太平洋 雷霆再起</p>-->
+                    <!--<p class="small_title">我正思考着，下意识地翻动着小密识地翻动着小密意识地翻动码箱，我...</p>-->
+
+                  </li>
+                  <li tabindex="7" class="li" data-type="1">
+                    <img src="../img/indexImg/ds3.png" alt="image04" />
+                    <!--<p>环太平洋 雷霆再起</p>-->
+                    <!--<p class="small_title">我正思考着，下意识地翻动着小密识地翻动着小密意识地翻动码箱，我...</p>-->
+
+                  </li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div class="videoList cols center "
-               style="position: relative;bottom: 0vmin; padding: 0vmin 0 2vmin;  padding-bottom: 18vmin">
-            <div class="index_zy">
-              <span class="index_zyt index_left"></span><span class="index_zi ">综艺</span>
-            </div>
-            <!-- 剧集推荐 把默认放在了这里-->
-            <div class="ulWrap">
-              <ul class="tj index_ul">
-                <li tabindex="4" class="li" data-type="1">
-                  <img src="../img/indexImg/zy1.png" alt="image02" />
-                </li>
-                <li tabindex="5" class="li" data-type="1">
-                  <img src="../img/indexImg/zy2.png" alt="image03" />
-                  <!--<p>密室</p>-->
-                  <!--<p class="small_title">我正思考着，下意识地翻动着小密识地翻动着小密意识地翻动码箱，我...</p>-->
+            <div class="videoList cols yx" style="position: relative;bottom: 0vmin;">
+              <div class="index_zy">
+                <span class="index_yx index_left"></span><span class="index_zi">游戏</span>
+              </div>
+              <!-- 剧集推荐 把默认放在了这里-->
+              <div class="ulWrap">
+                <ul class="tj index_ul">
+                  <li tabindex="4" class="li li_yxFirst" data-type="1">
+                    <img src="../img/indexImg/yx.png" alt="image02" />
+                  </li>
+                  <li tabindex="5" class="li li_yx" data-type="1">
+                    <img src="../img/indexImg/yxc.png" alt="image02" />
+                    <p class="name_tit">密室</p>
+                    <p class="small_title">我正思考着，下意识地翻动着小密识地翻动着小密意识地翻动码箱，我...</p>
 
-                </li>
-                <li tabindex="6" class="li" data-type="1">
-                  <img src="../img/indexImg/zy3.png" alt="image04" />
-                  <!--<p>花火</p>-->
-                  <!--<p class="small_title">我正思考着，下意识地翻动着小密识地翻动着小密意识地翻动码箱，我...</p>-->
+                  </li>
+                  <li tabindex="6" class="li li_yx" data-type="1">
+                    <img src="../img/selected/5.png" alt="image02" />
+                    <p class="name_tit">密室</p>
+                    <p class="small_title">我正思考着，下意识地翻动着小密识地翻动着小密意识地翻动码箱，我...</p>
+                  </li>
+                  <li tabindex="7" class="li li_yx" data-type="1">
+                    <img src="../img/selected/5.png" alt="image02" />
+                    <p class="name_tit">密室</p>
+                    <p class="small_title">我正思考着，下意识地翻动着小密识地翻动着小密意识地翻动码箱，我...</p>
+                  </li>
+                  <li tabindex="8" class="li li_yx" data-type="1">
+                    <img src="../img/selected/5.png" alt="image02" />
+                    <p class="name_tit">密室</p>
+                    <p class="small_title">我正思考着，下意识地翻动着小密识地翻动着小密意识地翻动码箱，我...</p>
+                  </li>
+                  <li tabindex="9" class="li li_yx" data-type="1">
+                    <img src="../img/selected/5.png" alt="image02" />
+                    <p class="name_tit">密室</p>
+                    <p class="small_title">我正思考着，下意识地翻动着小密识地翻动着小密意识地翻动码箱，我...</p>
 
-                </li>
-                <li tabindex="7" class="li" data-type="1">
-                  <img src="../img/indexImg/zy2.png" alt="image05" />
-                  <!--<p>雨无声处</p>-->
-                  <!--<p class="small_title">我正思考着，下意识地翻动着小密识地翻动着小密意识地翻动码箱，我...</p>-->
-
-                </li>
-                <li tabindex="8" class="li" data-type="1">
-                  <img src="../img/indexImg/zy3.png" alt="image01" />
-                  <!--<p>环太平洋 雷霆再起</p>-->
-                  <!--
-                                              <p class="small_title">我正思考着，下意识地翻动着小密识地翻动着小密意识地翻动码箱，我...</p>
-                  -->
-
-                </li>
-                <li tabindex="9" class="li" data-type="1">
-                  <img src="../img/indexImg/zy4.png" alt="image02" />
-                  <!--<p>环太平洋 雷霆再起</p>-->
-                  <!--<p class="small_title">我正思考着，下意识地翻动着小密识地翻动着小密意识地翻动码箱，我...</p>-->
-
-                </li>
-                <li tabindex="4" class="li" data-type="1">
-                  <img src="../img/indexImg/zy5.png" alt="image03" />
-                  <!--<p>环太平洋 雷霆再起</p>-->
-                  <!--<p class="small_title">我正思考着，下意识地翻动着小密识地翻动着小密意识地翻动码箱，我...</p>-->
-
-                </li>
-                <li tabindex="5" class="li" data-type="1">
-                  <img src="../img/indexImg/zy1.png" alt="image09" />
-                  <!--<p>环太平洋 雷霆再起</p>-->
-                  <!--<p class="small_title">我正思考着，下意识地翻动着小密识地翻动着小密意识地翻动码箱，我...</p>-->
-
-                </li>
-                <li tabindex="6" class="li" data-type="1">
-                  <img src="../img/indexImg/zy2.png" alt="image10" />
-                  <!--<p>环太平洋 雷霆再起</p>-->
-                  <!--<p class="small_title">我正思考着，下意识地翻动着小密识地翻动着小密意识地翻动码箱，我...</p>-->
-
-                </li>
-                <li tabindex="7" class="li" data-type="1">
-                  <img src="../img/indexImg/ds3.png" alt="image04" />
-                  <!--<p>环太平洋 雷霆再起</p>-->
-                  <!--<p class="small_title">我正思考着，下意识地翻动着小密识地翻动着小密意识地翻动码箱，我...</p>-->
-
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="videoList cols yx" style="position: relative;bottom: 0vmin; padding: 0vmin 0 10vmin;">
-            <div class="index_zy">
-              <span class="index_yx index_left"></span><span class="index_zi">游戏</span>
-            </div>
-            <!-- 剧集推荐 把默认放在了这里-->
-            <div class="ulWrap">
-              <ul class="tj index_ul">
-                <li tabindex="4" class="li li_yxFirst" data-type="1">
-                  <img src="../img/indexImg/yx.png" alt="image02" />
-                </li>
-                <li tabindex="5" class="li li_yx" data-type="1">
-                  <img src="../img/indexImg/yxc.png" alt="image02" />
-                  <p class="name_tit">密室</p>
-                  <p class="small_title">我正思考着，下意识地翻动着小密识地翻动着小密意识地翻动码箱，我...</p>
-
-                </li>
-                <li tabindex="6" class="li li_yx" data-type="1">
-                  <img src="../img/selected/5.png" alt="image02" />
-                  <p class="name_tit">密室</p>
-                  <p class="small_title">我正思考着，下意识地翻动着小密识地翻动着小密意识地翻动码箱，我...</p>
-                </li>
-                <li tabindex="7" class="li li_yx" data-type="1">
-                  <img src="../img/selected/5.png" alt="image02" />
-                  <p class="name_tit">密室</p>
-                  <p class="small_title">我正思考着，下意识地翻动着小密识地翻动着小密意识地翻动码箱，我...</p>
-                </li>
-                <li tabindex="8" class="li li_yx" data-type="1">
-                  <img src="../img/selected/5.png" alt="image02" />
-                  <p class="name_tit">密室</p>
-                  <p class="small_title">我正思考着，下意识地翻动着小密识地翻动着小密意识地翻动码箱，我...</p>
-                </li>
-                <li tabindex="9" class="li li_yx" data-type="1">
-                  <img src="../img/selected/5.png" alt="image02" />
-                  <p class="name_tit">密室</p>
-                  <p class="small_title">我正思考着，下意识地翻动着小密识地翻动着小密意识地翻动码箱，我...</p>
-
-                </li>
-              </ul>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="index_down">
-        <img src="../img/down.png" alt="">
-      </div>
+      <!--<div class="index_down">-->
+        <!--<img src="../img/down.png" alt="">-->
+      <!--</div>-->
     </div>
   </div>
 
@@ -315,212 +328,360 @@
   // 键盘事件开始
   $(function() {
     var currentPage = 'jingxuan'
-    if (currentPage === 'jingxuan') {
-        var jx_jqThis;
-        var jx_colThis;
-        var jx_startAnimate = false
-        var jx_seltWidth;
-        var totalWhidth = document.documentElement.scrollWidth;
-        $(window).keydown(function (e) {
-            // console.log(e.keyCode)
-            $('.li').each(function () { // 左右的this
-                if ($(this).hasClass('active')) {
-                    jx_jqThis = $(this)
-                    jx_seltWidth = $(this).width() + 80
-                }
-            });
-            $('.col').each(function () { // 上下的this
-                if ($(this).hasClass('aty')) {
-                    jx_colThis = $(this)
-                }
-            });
-            // console.log(e.keyCode)
-            if(e.keyCode==38){ // 上
-                // $("body").attr("class","animated slideOutUp")
-                // $("body").addClass("black")
-                // setTimeout(function () {
-                //     window.location.href='personal/login.html'
-                // },1000)
-            }
-            if(e.keyCode==40){ // 下 跳到精选次屏
-                currentPage = 'ciping'
-                $(".bg-jingxuan").addClass('filter-hide')
-                $(".translate-wrap").addClass("toPage2")
-            }
-            if(e.keyCode==39){ // 右-39
-                var id = parseInt(jx_jqThis.attr("tabIndex"))+1
-                if (jx_jqThis.parents().hasClass('tuijian')) {
-                    if (!jx_startAnimate) {
-                        jx_startAnimate = true
-                        jx_jqThis.removeClass('active')
-                        if (jx_jqThis.next().length === 0) { // 这是到头啦
-                            jx_jqThis.parents('.aty').find('.li').eq(0).addClass('active')
-                            jx_jqThis.parents('.tj').animate({
-                                left: '0px'
-                            })
-                            jx_startAnimate = false
-                            select(0)
-                            return
-                        }else {
-                            select(id)
-                        }
-                        if (totalWhidth - jx_seltWidth - jx_jqThis.next().position().left <= 20) {
-                            jx_jqThis.parents('.tj').animate({
-                                left: totalWhidth - jx_seltWidth - jx_jqThis.next().position().left - 40 + 'px'
-                            })
-                        }
-                        jx_jqThis.next().addClass('active')
-                    }
-
-                }
-            }
-            if(e.keyCode==37){ // 左-37
-                if (jx_jqThis.parents().hasClass('tuijian')) {
-                    var id = 0
-                    if (!jx_startAnimate) {
-                        jx_startAnimate = true
-                        jx_jqThis.removeClass('active')
-                        if(jx_jqThis.parent().hasClass('tj')){ // 父元素是1
-                            if (jx_jqThis.prev().length === 0) { // 这是到头啦
-                                jx_jqThis.parents('.aty').find('.li').last().addClass('active')
-                                jx_jqThis.parents('.tj').animate({
-                                    left: totalWhidth - jx_seltWidth - jx_jqThis.parents('.tj').find('.li').last().position().left - 50 + 'px'
-                                })
-                                jx_startAnimate = false
-                                id = jx_jqThis.parents('.aty').find('.li').last().attr("tabIndex")
-                                select(id)
-                                return
-                            }else {
-                                id = parseInt(jx_jqThis.attr("tabIndex"))-1
-                                select(id)
-                            }
-                            if (jx_jqThis.prev().offset().left <= 20) {
-                                jx_jqThis.parents('.tj').animate({
-                                    left: 10 - jx_jqThis.prev().position().left + 'px'
-                                })
-                            }
-                            jx_jqThis.prev().addClass('active')
-                        }
-                    }
-
-                }
-            }
-            if(e.keyCode==13){ // enter
-                var type = jx_jqThis.attr("data-type")
-                if (type === '0'){ // 电视
-                    window.location.href='details.html'
-                }else if (type === '1'){ // 综艺
-                    window.location.href='detailszy.html'
-                }else if (type === '2'){ // 电影
-                    window.location.href='detailsSingle.html'
-                }
-
-            }
-            // 返回上一页
-            if (e.keyCode == 8) { // Backspace键
-                window.history.go(-1)
-            }
-            setTimeout(function () {
-                jx_startAnimate = false
-            }, 200)
-        })
-
-        // 返回当前集数的 index
-        function mod() {
-            var index = 0
-            $(".setNumber .li").each(function (item,i) {
-                if ($(this).css('display') == 'inline-block') {
-                    index = $(this).index()
-                }
-            })
-            return index
-        }
-        // 剧集
-        function number(str) {
-            var arr = str.split('-')
-            console.log(arr)
-            var start = 0
-            var end = 0
-            if (arr.length>1) {
-                start = parseInt(arr[0])
-                end = parseInt(arr[1])
-            }else { // =1
-                start = parseInt(arr[0])
-                end = parseInt(arr[0])
-            }
-            $(".setNumber .li").each(function (item,i) {
-                if (start<=end) {
-                    $(this).show()
-                    $(this).children().html(start)
-                    start = start+1
-                } else {
-                    $(this).hide()
-                }
-            })
-        }
-
-        function scrollToEnd(){//滚动到底部
-            var h = $(document).height()-$(window).height();
-            $(document).scrollTop(h);
-        }
-    }
-
+    goJingxuan(currentPage)
   })
+
+  function goJingxuan (currentPage) {
+      // $('.sel_lr').addClass('sel_opacity')
+      var jx_jqThis;
+      var jx_colThis;
+      var jx_startAnimate = false
+      var jx_seltWidth;
+      var totalWhidth = document.documentElement.scrollWidth;
+      $(window).keydown(function (e) {
+          e.stopPropagation()
+          e.preventDefault()
+          $('.jingxuan .li').each(function () { // 左右的this
+              if ($(this).hasClass('active')) {
+                  jx_jqThis = $(this)
+                  jx_seltWidth = $(this).width() + 80
+              }
+          });
+          $('.col').each(function () { // 上下的this
+              if ($(this).hasClass('aty')) {
+                  jx_colThis = $(this)
+              }
+          });
+          // console.log(e.keyCode)
+          if(e.keyCode==38){ // 上
+              // $("body").attr("class","animated slideOutUp")
+              // $("body").addClass("black")
+              // setTimeout(function () {
+              //     window.location.href='personal/login.html'
+              // },1000)
+          }
+          if(e.keyCode==40){ // 下 跳到精选次屏
+              currentPage = 'ciping'
+              $(".bg-jingxuan").addClass('filter-hide')
+              $(".translate-wrap").removeClass('toPage1').addClass("toPage2")
+              $(window).unbind()
+              goCiping(currentPage)
+          }
+          if(e.keyCode==39){ // 右-39
+              var id = parseInt(jx_jqThis.attr("tabIndex"))+1
+              if (jx_jqThis.parents().hasClass('tuijian')) {
+                  if (!jx_startAnimate) {
+                      jx_startAnimate = true
+                      jx_jqThis.removeClass('active')
+                      if (jx_jqThis.next().length === 0) { // 这是到头啦
+                          jx_jqThis.parents('.aty').find('.li').eq(0).addClass('active')
+                          jx_jqThis.parents('.tj').animate({
+                              left: '0px'
+                          })
+                          jx_startAnimate = false
+                          select(0)
+                          return
+                      }else {
+                          select(id)
+                      }
+                      jx_jqThis.next().addClass('active')
+                      if (totalWhidth - jx_seltWidth - jx_jqThis.next().position().left <= 20) {
+                          jx_jqThis.parents('.tj').animate({
+                              left: totalWhidth - jx_seltWidth - jx_jqThis.next().position().left - 40 + 'px'
+                          })
+                      }
+
+                  }
+
+              }
+          }
+          if(e.keyCode==37){ // 左-37
+              if (jx_jqThis.parents().hasClass('tuijian')) {
+                  var id = 0
+                  if (!jx_startAnimate) {
+                      jx_startAnimate = true
+                      jx_jqThis.removeClass('active')
+                      if(jx_jqThis.parent().hasClass('tj')){ // 父元素是1
+                          if (jx_jqThis.prev().length === 0) { // 这是到头啦
+                              jx_jqThis.parents('.aty').find('.li').last().addClass('active')
+                              jx_jqThis.parents('.tj').animate({
+                                  left: totalWhidth - jx_seltWidth - jx_jqThis.parents('.tj').find('.li').last().position().left - 50 + 'px'
+                              })
+                              jx_startAnimate = false
+                              id = jx_jqThis.parents('.aty').find('.li').last().attr("tabIndex")
+                              select(id)
+                              return
+                          }else {
+                              id = parseInt(jx_jqThis.attr("tabIndex"))-1
+                              select(id)
+                          }
+                          if (jx_jqThis.prev().offset().left <= 20) {
+                              jx_jqThis.parents('.tj').animate({
+                                  left: 10 - jx_jqThis.prev().position().left + 'px'
+                              })
+                          }
+                          jx_jqThis.prev().addClass('active')
+                      }
+                  }
+
+              }
+          }
+          if(e.keyCode==13){ // enter
+              var type = jx_jqThis.attr("data-type")
+              if (type === '0'){ // 电视
+                  window.location.href='details.html'
+              }else if (type === '1'){ // 综艺
+                  window.location.href='detailszy.html'
+              }else if (type === '2'){ // 电影
+                  window.location.href='detailsSingle.html'
+              }
+
+          }
+          // 返回上一页
+          if (e.keyCode == 8) { // Backspace键
+              window.history.go(-1)
+          }
+          setTimeout(function () {
+              jx_startAnimate = false
+          }, 200)
+      })
+
+      // 返回当前集数的 index
+      function mod() {
+          var index = 0
+          $(".setNumber .li").each(function (item,i) {
+              if ($(this).css('display') == 'inline-block') {
+                  index = $(this).index()
+              }
+          })
+          return index
+      }
+      // 剧集
+      function number(str) {
+          var arr = str.split('-')
+          console.log(arr)
+          var start = 0
+          var end = 0
+          if (arr.length>1) {
+              start = parseInt(arr[0])
+              end = parseInt(arr[1])
+          }else { // =1
+              start = parseInt(arr[0])
+              end = parseInt(arr[0])
+          }
+          $(".setNumber .li").each(function (item,i) {
+              if (start<=end) {
+                  $(this).show()
+                  $(this).children().html(start)
+                  start = start+1
+              } else {
+                  $(this).hide()
+              }
+          })
+      }
+
+      function scrollToEnd(){//滚动到底部
+          var h = $(document).height()-$(window).height();
+          $(document).scrollTop(h);
+      }
+
+  }
 
   // 每点击一下键盘就
   // select(0)
   function select(id) {
-    var jsonData = [
-      {"name":"都挺好",
-        "desc": "精神虐待能对被伤害着产生毁灭性的影响精神虐待能对被伤害着产生毁灭性的影响",
-        "type": "剧集/家庭",
-        "actor": "姚晨 / 倪大红 / 郭京飞 / 杨祐宁 / 李念 等",
-        "bgImg": '../img/selected/1.jpg'
-      },
-      {"name":"都挺好1",
-        "desc": "精神虐待能对被伤害着产生毁灭性的影响",
-        "type": "剧集/家庭",
-        "actor": "姚晨1 / 倪大红1 / 郭京飞1 / 杨祐宁1 / 李念1 等",
-        "bgImg": '../img/selected/2.jpg'
-      },
-      {"name":"都挺好2",
-        "desc": "精神虐待能对被伤害着产生毁灭性的影响",
-        "type": "剧集/家庭",
-        "actor": "姚晨2 / 倪大红2 / 郭京飞2 / 杨祐宁2 / 李念2 等",
-        "bgImg": '../img/selected/3.jpg'
-      },
-      {"name":"都挺好3",
-        "desc": "精神虐待能对被伤害着产生毁灭性的影响",
-        "type": "剧集3/家庭6",
-        "actor": "姚晨3 / 倪大红3 / 郭京飞3 / 杨祐宁3 / 李念3 等",
-        "bgImg": '../img/selected/4.jpg'
-      },
-      {"name":"都挺好4",
-        "desc": "精神虐待能对被伤害着产生毁灭性的影响",
-        "type": "剧集5/家庭6",
-        "actor": "姚晨4 / 倪大红4 / 郭京飞4 / 杨祐宁4 / 李念4 等",
-        "bgImg": '../img/selected/5.jpg'
-      },
-      {"name":"都挺好5",
-        "desc": "精神虐待能对被伤害着产生毁灭性的影响",
-        "type": "剧集3/家庭4",
-        "actor": "姚晨5 / 倪大红5 / 郭京飞5 / 杨祐宁5 / 李念5 等",
-        "bgImg": '../img/selected/6.jpg'
-      }
-    ]
+      var jsonData = [
+          {"name":"都挺好",
+              "desc": "精神虐待能对被伤害着产生毁灭性的影响精神虐待能对被伤害着产生毁灭性的影响",
+              "type": "剧集/家庭",
+              "actor": "姚晨 / 倪大红 / 郭京飞 / 杨祐宁 / 李念 等",
+              "bgImg": '../img/selected/1.jpg'
+          },
+          {"name":"都挺好1",
+              "desc": "精神虐待能对被伤害着产生毁灭性的影响",
+              "type": "剧集/家庭",
+              "actor": "姚晨1 / 倪大红1 / 郭京飞1 / 杨祐宁1 / 李念1 等",
+              "bgImg": '../img/selected/2.jpg'
+          },
+          {"name":"都挺好2",
+              "desc": "精神虐待能对被伤害着产生毁灭性的影响",
+              "type": "剧集/家庭",
+              "actor": "姚晨2 / 倪大红2 / 郭京飞2 / 杨祐宁2 / 李念2 等",
+              "bgImg": '../img/selected/3.jpg'
+          },
+          {"name":"都挺好3",
+              "desc": "精神虐待能对被伤害着产生毁灭性的影响",
+              "type": "剧集3/家庭6",
+              "actor": "姚晨3 / 倪大红3 / 郭京飞3 / 杨祐宁3 / 李念3 等",
+              "bgImg": '../img/selected/4.jpg'
+          },
+          {"name":"都挺好4",
+              "desc": "精神虐待能对被伤害着产生毁灭性的影响",
+              "type": "剧集5/家庭6",
+              "actor": "姚晨4 / 倪大红4 / 郭京飞4 / 杨祐宁4 / 李念4 等",
+              "bgImg": '../img/selected/5.jpg'
+          },
+          {"name":"都挺好5",
+              "desc": "精神虐待能对被伤害着产生毁灭性的影响",
+              "type": "剧集3/家庭4",
+              "actor": "姚晨5 / 倪大红5 / 郭京飞5 / 杨祐宁5 / 李念5 等",
+              "bgImg": '../img/selected/6.jpg'
+          }
+      ]
 
-    $(".sel_title").html(jsonData[id].name)
-    $(".sel_des").html(jsonData[id].desc)
-    $(".sel_type").html(jsonData[id].type)
-    $(".actor").html(jsonData[id].actor)
-    $(".bg-jingxuan").css({
-      "background":"url("+jsonData[id].bgImg+")",
-      "width": "100vw",
-      "height": "100vh",
-      "background-size": "cover",
-      "position": "absolute"
-    })
+      $(".sel_title").html(jsonData[id].name)
+      $(".sel_des").html(jsonData[id].desc)
+      $(".sel_type").html(jsonData[id].type)
+      $(".actor").html(jsonData[id].actor)
+      $(".bg-jingxuan").css({
+          "background":"url("+jsonData[id].bgImg+")",
+          "width": "100vw",
+          "height": "100vh",
+          "background-size": "cover",
+          "position": "absolute"
+      })
 
+  }
+
+  function goCiping (currentPage) {
+      $('.ciping-content .videoList').first().addClass('img_aty')
+      $('.ciping-content .videoList').first().find('.li').eq(0).addClass('active')
+      $(".ciping-content").css('transform', 'translateY(0)');
+      var jqThis;
+      var colThis;
+      var startAnimate = false
+      var seltWidth;
+      var totalWhidth = document.documentElement.scrollWidth;
+      var screenWidth = document.body.offsetWidth;
+      $(window).keydown(function (e) {
+          e.stopPropagation()
+          e.preventDefault()
+          // console.log(e.keyCode)
+          $('.ciping .li').each(function () { // 左右的this
+              if ($(this).hasClass('active')) {
+                  jqThis = $(this)
+                  seltWidth = $(this).width() + 80
+              }
+          });
+          $('.ciping .cols').each(function () { // 上下的this
+              if ($(this).hasClass('img_aty')) {
+                  colThis = $(this)
+              }
+          });
+          // console.log(e.keyCode)
+          if(e.keyCode==38){ // 上
+              // console.log(colThis.index())
+              if (colThis.index() === 0) {
+                  $(".bg-jingxuan").removeClass('filter-hide')
+                  $(".translate-wrap").removeClass("toPage2").addClass('toPage1')
+                  $(window).unbind()
+                  currentPage = 'jingxuan'
+                  goJingxuan(currentPage)
+              }
+              if(colThis.prev().hasClass('center') || colThis.prev().hasClass('top1')){
+                  $(".ciping-content").css('transform', 'translateY(0)');
+              }
+              colThis.prev().addClass('img_aty')
+              colThis.prev().find('.li').eq(0).addClass('active')
+              colThis.removeClass('img_aty')
+              colThis.find('.li').removeClass('active')
+              colThis.prev().children().find('.tj').animate({
+                  left: '0px'
+              })
+          }
+          if(e.keyCode==40){ // 下
+              // console.log(colThis.next().hasClass('center'))
+              console.log('colThis', colThis)
+              if (colThis.next().length === 0) { // 这是到头啦
+                  $('.ciping-content .videoList').first().addClass('img_aty')
+                  $('.ciping-content .videoList').first().find('.li').eq(0).addClass('active')
+                  $(".ciping-content").css('transform', 'translateY(0)');
+              }
+              if(colThis.next().hasClass('center') || colThis.next().hasClass('yx')){
+                  // tops2()
+                  $(".ciping-content").css('transform', 'translateY(-23.8vw)');
+              }
+              colThis.next().addClass('img_aty')
+              colThis.next().find('.li').eq(0).addClass('active')
+              colThis.removeClass('img_aty')
+              colThis.find('.li').removeClass('active')
+              colThis.next().children().find('.tj').animate({
+                  left: '0px'
+              })
+          }
+          if(e.keyCode==39){ // 右-39
+              if (jqThis.parents().hasClass('videoList')) {
+                  if (!startAnimate) {
+                      startAnimate = true
+                      jqThis.removeClass('active')
+                      if (jqThis.next().length === 0) { // 这是到头啦
+                          jqThis.parents('.img_aty').find('.li').eq(0).addClass('active')
+                          jqThis.parents('.tj').animate({
+                              left: '0px'
+                          })
+                          startAnimate = false
+                          return
+                      }
+
+                      var offsetRight = screenWidth - jqThis.next().offset().left - seltWidth
+                      var parentOffsetL = jqThis.parents('.tj').offset().left
+                      var nextL = jqThis.next().position().left
+                      var nextOffsetL = parentOffsetL + nextL
+                      var nextoffsetR = screenWidth - nextOffsetL - seltWidth
+                      if (totalWhidth - seltWidth - jqThis.next().position().left <= 20) {
+                          if (nextoffsetR < 0) {
+                              jqThis.parents('.tj').animate({
+                                  left: totalWhidth - seltWidth - jqThis.next().position().left - 20 + 'px'
+                              })
+                          }
+                      }
+                      jqThis.next().addClass('active')
+                  }
+              }
+          }
+          if(e.keyCode==37){ // 左-37
+              if (jqThis.parents().hasClass('videoList')) {
+                  if (!startAnimate) {
+                      startAnimate = true
+                      jqThis.removeClass('active')
+                      if(jqThis.parent().hasClass('tj')){ // 父元素是1
+                          if (jqThis.prev().length === 0) { // 这是到头啦
+                              jqThis.parents('.img_aty').find('.li').last().addClass('active')
+                              jqThis.parents('.tj').animate({
+                                  left: totalWhidth - seltWidth - jqThis.parents('.tj').find('.li').last().position().left - 50 + 'px'
+                              })
+                              startAnimate = false
+                              return
+                          }
+                          if (jqThis.prev().offset().left <= 20) {
+                              jqThis.parents('.tj').animate({
+                                  left: 10 - jqThis.prev().position().left + 'px'
+                              })
+                          }
+                          jqThis.prev().addClass('active')
+                      }
+                  }
+
+              }
+          }
+          if(e.keyCode==13){ // enter
+              var type = jqThis.attr("data-type")
+              if (type === '0'){ // 电视
+                  window.location.href='detailsCommon.html'
+              }else if (type === '1'){ // 综艺
+                  window.location.href='detailszy.html'
+              }else if (type === '2'){ // 电影
+                  window.location.href='detailsSingle.html'
+              }
+          }
+          // 返回上一页
+          if (e.keyCode == 8) { // Backspace键
+              window.history.go(-1)
+          }
+          setTimeout(function () {
+              startAnimate = false
+          }, 200)
+      })
   }
 </script>
 </html>

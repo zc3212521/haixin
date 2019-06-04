@@ -90,7 +90,7 @@ $(function() {
     var startAnimate = false
     var totalWhidth = document.documentElement.scrollWidth;
     $(window).keydown(function (e) {
-        console.log(e.keyCode)
+        // console.log(e.keyCode)
 
         if (!startAnimate) {
             startAnimate = true
@@ -157,7 +157,6 @@ $(function() {
             //     }
             // }
             if(e.keyCode==13){ // 左-37 上-38 右-39 下-40
-                console.log()
                 if ($('.alert').css('display') == 'flex'){
                     $('.alert').hide(500)
                 }else {

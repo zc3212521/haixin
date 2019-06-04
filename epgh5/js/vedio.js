@@ -8,7 +8,7 @@ function videoControl() {
 
     var vids=document.getElementById("vids");
     // var vids = videojs('vids')
-    console.log(vids)
+    // console.log(vids)
 
     var sskd=$(".controls").width();/*替换原来的764*/
     /*一开始默认的视频路径（每个页面都会有一个默认的视频吧）*/
