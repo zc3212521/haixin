@@ -129,6 +129,8 @@ $(function() {
     var screenWidth = document.body.offsetWidth;
 
     $(window).keydown(function (e) {
+        e.stopPropagation()
+        e.preventDefault()
         console.log(e.keyCode)
         $('.li').each(function () { // 左右的this
             if ($(this).hasClass('active')) {

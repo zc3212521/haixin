@@ -133,6 +133,8 @@ $(function() {
     var screenWidth = document.body.offsetWidth;
 
     $(window).keydown(function (e) {
+        e.stopPropagation()
+        e.preventDefault()
         $('.li').each(function () { // 左右的this
             if ($(this).hasClass('active')) {
                 jqThis = $(this)
