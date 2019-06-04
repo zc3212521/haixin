@@ -173,7 +173,7 @@ li:focus{
 
 .videoCon h6{
     font-weight: normal;
-    font-size: 1.7vmin;
+    font-size: 1.0417vw;
 }
 
 .videoCon div>p{
@@ -536,8 +536,8 @@ not supported by any browser */}
 }
 
 .bound li{
-    width: 25vmin !important;
-    height: 33.7vmin !important;
+    width: 13.073vw !important;
+    height: 17.552vw !important;
     overflow: hidden;
 }
 .bound .active{
