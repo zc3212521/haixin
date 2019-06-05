@@ -327,8 +327,16 @@
 
   // 键盘事件开始
   $(function() {
-    var currentPage = 'jingxuan'
-    goJingxuan(currentPage)
+      window.currentPage = window.localStorage.getItem('currentPage') || 'jingxuan'
+      currentPage == 'jingxuan' ? goJingxuan(currentPage) : goCiping(currentPage)
+      if (currentPage == 'jingxuan') {
+          goJingxuan(currentPage)
+      } else {``
+          $(".bg-jingxuan").addClass('filter-hide')
+          $(".translate-wrap").removeClass('toPage1').addClass("toPage2")
+          $(window).unbind()
+          goCiping(currentPage)
+      }
   })
 
   function goJingxuan (currentPage) {
@@ -429,6 +437,7 @@
           }
           if(e.keyCode==13){ // enter
               var type = jx_jqThis.attr("data-type")
+              window.localStorage.setItem('currentPage', currentPage) // 记录是从哪个页面调到详情页的
               if (type === '0'){ // 电视
                   window.location.href='details.html'
               }else if (type === '1'){ // 综艺
@@ -672,6 +681,7 @@
           }
           if(e.keyCode==13){ // enter
               var type = jqThis.attr("data-type")
+              window.localStorage.setItem('currentPage', currentPage) // 记录是从哪个页面调到详情页的
               if (type === '0'){ // 电视
                   window.location.href='detailsCommon.html'
               }else if (type === '1'){ // 综艺
