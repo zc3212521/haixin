@@ -140,9 +140,10 @@
     transform: translateY(-50%);
     /*margin-top: 50%;*/
     color: #ccc;
-    display: inline-block;
+    display: -webkit-box;
+    text-align: left;
     /*height: 3.4375vw;*/
-    line-height: 1.1458vw;
+    /*line-height: 1.1458vw;*/
     /*-webkit-box-orient: vertical;*/
     -webkit-line-clamp: 3;
     line-clamp: 3;
@@ -152,6 +153,7 @@
      /*margin: 2vmin 1vmin;*/
     left: 1vmin;
     right: 1vmin;
+    -webkit-box-orient: vertical;
 }
 .zySetNum li.active{
     background: rgba(255,255,255,.2) !important;
