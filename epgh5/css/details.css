@@ -192,13 +192,14 @@
 }
 .details_tj{
     padding-left: 18vmin;
+    padding-bottom: 1.75vw;
 }
 .details_tj li img{
     border: 2px solid rgba(0,0,0,0);
 }
 .details_tj li.active img{
     border: 2px solid #fff;
-    transform: scale(1.05);
+    /*transform: scale(1.05);*/
 }
 .details_tj .titelH4,
 .details_tj .videoList .ulWrap{

@@ -87,7 +87,7 @@
 
 .videoList{
   padding:1vw;
-  overflow:hidden;
+  /*overflow:hidden;*/
   width:100vw;
 }
 

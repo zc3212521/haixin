@@ -168,14 +168,13 @@ $(function() {
             colThis.find('.li').removeClass('active')
         }
         if(e.keyCode==40){ // 下
-            console.log(colThis.next().length)
             if (colThis.next().length === 0) { // 这是到头啦
                 $('.col').first().addClass('aty')
                 $('.col').first().find('.li').eq(0).addClass('active')
                 tops()
             }
             if (colThis.next().hasClass('selectNumber')){ // 如果默认在 1-10集
-                number('1-10')
+                // number('1-10')
                 colThis.next().children().removeClass('mark')
                 colThis.next().find('.li').eq(0).addClass('mark')
             }
@@ -346,7 +345,7 @@ $(function() {
         $(".setNumber .li").each(function (item,i) {
             if (start<=end) {
                 $(this).show()
-                $(this).children().html("<span>第"+start+"期: 《还珠》剧组20年后重聚，沈腾，贾玲化身紫薇尔康...</span>")
+                // $(this).children().html("<span>第"+start+"期: 《还珠》剧组20年后重聚，沈腾，贾玲化身紫薇尔康...</span>")
                 start = start+1
             } else {
                 $(this).hide()
