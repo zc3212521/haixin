@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2ccb0ff7-fdb8-449e-9017-7bff37c451d3" name="Default Changelist" comment="">
+    <list default="true" id="2ccb0ff7-fdb8-449e-9017-7bff37c451d3" name="Default Changelist" comment="细节调整">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/epgh5/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/epgh5/css/common.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/epgh5/css/details.css" beforeDir="false" afterPath="$PROJECT_DIR$/epgh5/css/details.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/epgh5/html/detailszy.html" beforeDir="false" afterPath="$PROJECT_DIR$/epgh5/html/detailszy.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -40,7 +38,7 @@
         <entry file="file://$PROJECT_DIR$/epgh5/html/details.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
-              <caret line="19" column="42" lean-forward="true" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+              <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
               <folding>
                 <element signature="n#style#0;n#span#0;n#h6#0;n#div#0;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#h6#1;n#div#0;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -79,7 +77,7 @@
         <entry file="file://$PROJECT_DIR$/epgh5/html/detailszy.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1326">
-              <caret line="177" column="33" lean-forward="true" selection-start-line="177" selection-start-column="33" selection-end-line="177" selection-end-column="33" />
+              <caret line="177" column="33" selection-start-line="177" selection-start-column="33" selection-end-line="177" selection-end-column="33" />
               <folding>
                 <element signature="n#style#0;n#span#0;n#h6#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#h6#1;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -92,7 +90,7 @@
         <entry file="file://$PROJECT_DIR$/epgh5/html/index_c.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1953">
-              <caret line="281" column="13" lean-forward="true" selection-start-line="281" selection-start-column="13" selection-end-line="281" selection-end-column="13" />
+              <caret line="281" column="13" selection-start-line="281" selection-start-column="13" selection-end-line="281" selection-end-column="13" />
               <folding>
                 <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
@@ -102,11 +100,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/epgh5/css/common.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="90" column="14" lean-forward="true" selection-start-line="90" selection-start-column="14" selection-end-line="90" selection-end-column="14" />
+            <state relative-caret-position="323">
+              <caret line="219" column="9" lean-forward="true" selection-start-line="219" selection-start-column="9" selection-end-line="219" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -126,11 +124,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/epgh5/css/details.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="191" column="1" lean-forward="true" selection-start-line="191" selection-start-column="1" selection-end-line="191" selection-end-column="1" />
+            <state relative-caret-position="165">
+              <caret line="239" column="1" lean-forward="true" selection-start-line="239" selection-start-column="1" selection-end-line="239" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -147,7 +145,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>$('.ciping-content .videoList')</find>
       <find>.index_zy</find>
       <find>console</find>
       <find>.tj</find>
@@ -162,7 +159,6 @@
       <find>为您</find>
       <find>.tops li</find>
       <find>.videoCon h6</find>
-      <find>.singleH4</find>
       <find>.videoList li</find>
       <find>.zySetNum li</find>
       <find>&lt;span style=&quot;margin: 0 2.708vw;&quot;&gt;|&lt;/span&gt;</find>
@@ -176,7 +172,9 @@
       <find>.active</find>
       <find>ulWrap</find>
       <find>.details_tj</find>
+      <find>details_page</find>
       <find>.videoList</find>
+      <find>.singleH4</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -218,8 +216,8 @@
         <option value="$PROJECT_DIR$/epgh5/css/common-jx.css" />
         <option value="$PROJECT_DIR$/epgh5/html/index_z.html" />
         <option value="$PROJECT_DIR$/epgh5/html/detailszy.html" />
-        <option value="$PROJECT_DIR$/epgh5/css/details.css" />
         <option value="$PROJECT_DIR$/epgh5/css/common.css" />
+        <option value="$PROJECT_DIR$/epgh5/css/details.css" />
       </list>
     </option>
   </component>
@@ -256,11 +254,6 @@
             <path>
               <item name="heixin" type="b2602c69:ProjectViewProjectNode" />
               <item name="heixin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="heixin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="heixin" type="462c0819:PsiDirectoryNode" />
-              <item name="epgh5" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -302,7 +295,7 @@
       <workItem from="1559374803739" duration="3092000" />
       <workItem from="1559560664938" duration="37917000" />
       <workItem from="1559658925893" duration="5149000" />
-      <workItem from="1559714759792" duration="3896000" />
+      <workItem from="1559714759792" duration="5993000" />
     </task>
     <task id="LOCAL-00001" summary="精选页调试">
       <created>1559573224741</created>
@@ -374,11 +367,18 @@
       <option name="project" value="LOCAL" />
       <updated>1559716605481</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="细节调整">
+      <created>1559718740072</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1559718740072</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50054000" />
+    <option name="totallyTimeSpent" value="52151000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -395,8 +395,8 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.42144176" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.7892791" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32902032" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -465,9 +465,9 @@
     <MESSAGE value="回到第一排时第一排不能复原的问题" />
     <MESSAGE value="按方向键页面滚动问题" />
     <MESSAGE value="详情页面未能一屏展示的问题" />
-    <MESSAGE value="细节调整" />
     <MESSAGE value="综艺文字选集字体过大且没有溢出省略号的问题" />
-    <option name="LAST_COMMIT_MESSAGE" value="综艺文字选集字体过大且没有溢出省略号的问题" />
+    <MESSAGE value="细节调整" />
+    <option name="LAST_COMMIT_MESSAGE" value="细节调整" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/epgh5/html/index_cLoadding.html">
@@ -577,7 +577,7 @@
     <entry file="file://$PROJECT_DIR$/epgh5/html/index_c.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1953">
-          <caret line="281" column="13" lean-forward="true" selection-start-line="281" selection-start-column="13" selection-end-line="281" selection-end-column="13" />
+          <caret line="281" column="13" selection-start-line="281" selection-start-column="13" selection-end-line="281" selection-end-column="13" />
           <folding>
             <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
@@ -589,7 +589,7 @@
     <entry file="file://$PROJECT_DIR$/epgh5/html/details.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="19" column="42" lean-forward="true" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+          <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
           <folding>
             <element signature="n#style#0;n#span#0;n#h6#0;n#div#0;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#h6#1;n#div#0;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -613,7 +613,7 @@
     <entry file="file://$PROJECT_DIR$/epgh5/html/detailszy.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1326">
-          <caret line="177" column="33" lean-forward="true" selection-start-line="177" selection-start-column="33" selection-end-line="177" selection-end-column="33" />
+          <caret line="177" column="33" selection-start-line="177" selection-start-column="33" selection-end-line="177" selection-end-column="33" />
           <folding>
             <element signature="n#style#0;n#span#0;n#h6#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#h6#1;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -621,17 +621,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/epgh5/css/details.css">
+    <entry file="file://$PROJECT_DIR$/epgh5/css/common.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="191" column="1" lean-forward="true" selection-start-line="191" selection-start-column="1" selection-end-line="191" selection-end-column="1" />
+        <state relative-caret-position="323">
+          <caret line="219" column="9" lean-forward="true" selection-start-line="219" selection-start-column="9" selection-end-line="219" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/epgh5/css/common.css">
+    <entry file="file://$PROJECT_DIR$/epgh5/css/details.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="90" column="14" lean-forward="true" selection-start-line="90" selection-start-column="14" selection-end-line="90" selection-end-column="14" />
+        <state relative-caret-position="165">
+          <caret line="239" column="1" lean-forward="true" selection-start-line="239" selection-start-column="1" selection-end-line="239" selection-end-column="1" />
         </state>
       </provider>
     </entry>
